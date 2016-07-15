@@ -1,5 +1,5 @@
 module Amakanize
-  class BookName
+  class SeriesName
     # @param raw [String]
     def initialize(raw)
       @raw = raw
