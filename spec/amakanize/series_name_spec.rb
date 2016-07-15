@@ -9,6 +9,7 @@ RSpec.describe Amakanize::SeriesName do
     end
 
     {
+      "なれる!SE 2週間でわかる?SE入門 (電撃文庫)" => "なれる!SE 2週間でわかる?SE入門",
       "やはり俺の青春ラブコメはまちがっている。4" => "やはり俺の青春ラブコメはまちがっている。",
       "ラブライブ! School idol diary ~星空凛~" => "ラブライブ! School idol diary",
       "僕だけがいない街 (1) (カドカワコミックス・エース)" => "僕だけがいない街",
