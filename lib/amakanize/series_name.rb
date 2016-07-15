@@ -12,6 +12,7 @@ module Amakanize
         .gsub(/[[:space:]]*通常版/, "")
         .gsub(/[[:space:]]+[１-９\d①②③④⑤⑥⑦⑧⑨⑩].*/, "")
         .gsub(/[[:space:]]*[１-９\d①②③④⑤⑥⑦⑧⑨⑩]+巻?\z/, "")
+        .gsub(/[[:space:]]*~.+~/, "")
         .gsub(/\A[[:space:]]+|[[:space:]]+\z/, "")
     end
   end

@@ -10,6 +10,7 @@ RSpec.describe Amakanize::SeriesName do
 
     {
       "やはり俺の青春ラブコメはまちがっている。4" => "やはり俺の青春ラブコメはまちがっている。",
+      "ラブライブ! School idol diary ~星空凛~" => "ラブライブ! School idol diary",
       "僕だけがいない街 (1) (カドカワコミックス・エース)" => "僕だけがいない街",
       "冴えない彼女の育てかた (9)" => "冴えない彼女の育てかた",
       "東京レイヴンズEX1party in nest" => "東京レイヴンズEX1party in nest",
