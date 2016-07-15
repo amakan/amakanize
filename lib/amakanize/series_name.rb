@@ -5,10 +5,14 @@ module Amakanize
       @raw = raw
     end
 
-    # @todo
     # @note Override
     def to_s
       @raw
+        .gsub(/[[:space:]]*[\(（〈《【「『【［\[〔｛\{«‹〘〚].*/, "")
+        .gsub(/[[:space:]]*通常版/, "")
+        .gsub(/[[:space:]]+[１-９\d①②③④⑤⑥⑦⑧⑨⑩].*/, "")
+        .gsub(/[[:space:]]*[１-９\d①②③④⑤⑥⑦⑧⑨⑩]+巻?\z/, "")
+        .gsub(/\A[[:space:]]+|[[:space:]]+\z/, "")
     end
   end
 end

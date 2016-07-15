@@ -9,7 +9,9 @@ RSpec.describe Amakanize::SeriesName do
     end
 
     {
-      "僕だけがいない街 (1) (カドカワコミックス・エース)" => "僕だけがいない街 (1) (カドカワコミックス・エース)",
+      "やはり俺の青春ラブコメはまちがっている。4" => "やはり俺の青春ラブコメはまちがっている。",
+      "僕だけがいない街 (1) (カドカワコミックス・エース)" => "僕だけがいない街",
+      "冴えない彼女の育てかた (9)" => "冴えない彼女の育てかた",
     }.each do |book_name, expected_series_name|
       context "with #{book_name.inspect}" do
         let(:raw) do
