@@ -1,173 +1,14 @@
-require "active_support"
-
 module Amakanize
   class AuthorName
-    ENCLOSED_ALPHANUMERICS = %w(
-      ⓿
-      ⓪
-      ➀
-      ➊
-      ➀
-      ❶
-      ①
-      ⓵
-      ⓾
-      ➉
-      ❿
-      ➉
-      ➓
-      ⑩
-      ⓫
-      ⑪
-      ⓬
-      ⑫
-      ⑬
-      ⓭
-      ⑭
-      ⓮
-      ⑮
-      ⓯
-      ⑯
-      ⓰
-      ⓱
-      ⑰
-      ⓲
-      ⑱
-      ⑲
-      ⓳
-      ❷
-      ⓶
-      ②
-      ➁
-      ➋
-      ➁
-      ⓴
-      ⑳
-      ㉑
-      ㉒
-      ㉓
-      ㉔
-      ㉕
-      ㉖
-      ㉗
-      ㉘
-      ㉙
-      ➌
-      ➂
-      ⓷
-      ❸
-      ③
-      ➂
-      ㉚
-      ㉛
-      ㉜
-      ㉝
-      ㉞
-      ㉟
-      ㊱
-      ㊲
-      ㊳
-      ㊴
-      ➃
-      ➍
-      ⓸
-      ④
-      ❹
-      ➃
-      ㊵
-      ㊶
-      ㊷
-      ㊸
-      ㊹
-      ㊺
-      ㊻
-      ㊼
-      ㊽
-      ㊾
-      ⑤
-      ⓹
-      ➄
-      ➄
-      ❺
-      ➎
-      ㊿
-      ⑥
-      ➅
-      ❻
-      ➏
-      ⓺
-      ➅
-      ➆
-      ⑦
-      ➐
-      ⓻
-      ➆
-      ❼
-      ⑧
-      ➇
-      ➇
-      ❽
-      ⓼
-      ➑
-      ❾
-      ⑨
-      ➈
-      ⓽
-      ➒
-      ➈
-      ⓐ
-      Ⓐ
-      ⓑ
-      Ⓑ
-      ⓒ
-      Ⓒ
-      ⓓ
-      Ⓓ
-      ⓔ
-      Ⓔ
-      ⓕ
-      Ⓕ
-      ⓖ
-      Ⓖ
-      ⓗ
-      Ⓗ
-      ⓘ
-      Ⓘ
-      ⓙ
-      Ⓙ
-      ⓚ
-      Ⓚ
-      ⓛ
-      Ⓛ
-      ⓜ
-      Ⓜ
-      ⓝ
-      Ⓝ
-      ⓞ
-      Ⓞ
-      ⓟ
-      Ⓟ
-      ⓠ
-      Ⓠ
-      ⓡ
-      Ⓡ
-      ⓢ
-      Ⓢ
-      ⓣ
-      Ⓣ
-      ⓤ
-      Ⓤ
-      ⓥ
-      Ⓥ
-      ⓦ
-      Ⓦ
-      ⓧ
-      Ⓧ
-      ⓨ
-      Ⓨ
-      ⓩ
-      Ⓩ
-    )
+    class << self
+      # @return [Array<Amakan::Filters::BaseFilter>]
+      def filters
+        @filters ||= [
+          ::Amakanize::Filters::NormalizationFilter.new,
+          ::Amakanize::Filters::ParenthesesDeletionFilter.new,
+        ]
+      end
+    end
 
     # @param raw [String]
     def initialize(raw)
@@ -176,11 +17,9 @@ module Amakanize
 
     # @note Override
     def to_s
-      ENCLOSED_ALPHANUMERICS.inject(@raw) do |result, enclosed_alphanumerics|
-        result.gsub(enclosed_alphanumerics) do |matched_string|
-          ::ActiveSupport::Multibyte::Unicode.normalize(matched_string)
-        end
-      end.gsub(/\((\d+)\)/, '\1')
+      self.class.filters.inject(@raw) do |result, filter|
+        filter.call(result)
+      end
     end
   end
 end
