@@ -1,6 +1,6 @@
 # Amakanize [![Build Status](https://travis-ci.org/amakan/amakanize.svg?branch=master)](https://travis-ci.org/amakan/amakanize)
 
-Utilities to canonicalize series names and author names.
+Utilities to canonicalize series names and author names for [amakan.net](https://amakan.net/).
 
 ## Usage
 
