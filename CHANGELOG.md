@@ -1,3 +1,6 @@
+## 0.0.4
+- Normalize all characters
+
 ## 0.0.3
 - Remove space from author name
 

@@ -5,7 +5,7 @@ module Amakanize
       # @param string [String] e.g. `"渡 航"`
       # @return [String] e.g. `"渡航"`
       def call(string)
-        string.gsub(/[[:space:]]+/, "")
+        string.gsub(/\s+/, "")
       end
     end
   end

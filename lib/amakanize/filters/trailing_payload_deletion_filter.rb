@@ -11,7 +11,7 @@ module Amakanize
       # @param string [String] e.g. `"ハノカゲ　ほか"`
       # @return [String] e.g. `"ハノカゲ"`
       def call(string)
-        string.gsub(/[[:space:]]+#{::Regexp.union(PAYLOADS)}\z/, "")
+        string.gsub(/\s+#{::Regexp.union(PAYLOADS)}\z/, "")
       end
     end
   end
