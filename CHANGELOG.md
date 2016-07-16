@@ -1,3 +1,6 @@
+## 0.0.3
+- Remove space from author name
+
 ## 0.0.2
 - Remove parentheses of numericals in author name
 - Remove role name from author name

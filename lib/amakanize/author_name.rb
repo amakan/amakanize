@@ -8,8 +8,8 @@ module Amakanize
           ::Amakanize::Filters::NormalizationFilter.new,
           ::Amakanize::Filters::ParenthesesDeletionFilter.new,
           ::Amakanize::Filters::RoleNameDeletionFilter.new,
-          ::Amakanize::Filters::StripFilter.new,
           ::Amakanize::Filters::TrailingPayloadDeletionFilter.new,
+          ::Amakanize::Filters::SpaceDeletionFilter.new,
         ]
       end
     end
