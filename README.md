@@ -30,6 +30,8 @@ And then execute:
 bundle
 ```
 
+Or manually install:
+
 ```sh
 gem install amakanize
 ```
