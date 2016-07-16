@@ -4,6 +4,7 @@ module Amakanize
       # @return [Array<Amakan::Filters::BaseFilter>]
       def filters
         @filters ||= [
+          ::Amakanize::Filters::HtmlUnescapeFilter.new,
           ::Amakanize::Filters::NormalizationFilter.new,
           ::Amakanize::Filters::ParenthesesDeletionFilter.new,
           ::Amakanize::Filters::RoleNameDeletionFilter.new,
