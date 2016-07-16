@@ -178,10 +178,9 @@ module Amakanize
     def to_s
       ENCLOSED_ALPHANUMERICS.inject(@raw) do |result, enclosed_alphanumerics|
         result.gsub(enclosed_alphanumerics) do |matched_string|
-          half_size_alphanumerics = ::ActiveSupport::Multibyte::Unicode.normalize(matched_string)
-          "(#{half_size_alphanumerics})"
+          ::ActiveSupport::Multibyte::Unicode.normalize(matched_string)
         end
-      end
+      end.gsub(/\((\d+)\)/, '\1')
     end
   end
 end

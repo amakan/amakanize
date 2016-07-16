@@ -9,7 +9,9 @@ RSpec.describe Amakanize::AuthorName do
     end
 
     {
-      "ぽんかん⑧" => "ぽんかん(8)"
+      "ぽんかん(8)" => "ぽんかん8",
+      "ぽんかん8" => "ぽんかん8",
+      "ぽんかん⑧" => "ぽんかん8",
     }.each do |key, value|
       context "with #{key.inspect}" do
         let(:raw) do
