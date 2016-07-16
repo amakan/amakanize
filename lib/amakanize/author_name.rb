@@ -7,6 +7,7 @@ module Amakanize
           ::Amakanize::Filters::NormalizationFilter.new,
           ::Amakanize::Filters::ParenthesesDeletionFilter.new,
           ::Amakanize::Filters::RoleNameDeletionFilter.new,
+          ::Amakanize::Filters::StripFilter.new,
         ]
       end
     end

@@ -9,9 +9,11 @@ RSpec.describe Amakanize::AuthorName do
     end
 
     {
+      " 　ハノカゲ 　" => "ハノカゲ",
       "ぽんかん(8)" => "ぽんかん8",
       "ぽんかん8" => "ぽんかん8",
       "ぽんかん⑧" => "ぽんかん8",
+      "漫画:ハノカゲ" => "ハノカゲ",
       "漫画:ハノカゲ" => "ハノカゲ",
     }.each do |key, value|
       context "with #{key.inspect}" do
