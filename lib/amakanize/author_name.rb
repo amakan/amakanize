@@ -9,6 +9,7 @@ module Amakanize
           ::Amakanize::Filters::ParenthesesDeletionFilter.new,
           ::Amakanize::Filters::RoleNameDeletionFilter.new,
           ::Amakanize::Filters::StripFilter.new,
+          ::Amakanize::Filters::TrailingPayloadDeletionFilter.new,
         ]
       end
     end
