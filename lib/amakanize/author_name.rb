@@ -6,6 +6,7 @@ module Amakanize
         @filters ||= [
           ::Amakanize::Filters::NormalizationFilter.new,
           ::Amakanize::Filters::ParenthesesDeletionFilter.new,
+          ::Amakanize::Filters::RoleNameDeletionFilter.new,
         ]
       end
     end
