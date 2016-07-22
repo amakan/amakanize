@@ -1,3 +1,8 @@
+## 0.1.0
+- Support roman numerals on series name
+- Support 第N巻 on series name
+- Normalize series name
+
 ## 0.0.4
 - Normalize all characters
 
