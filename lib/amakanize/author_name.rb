@@ -8,7 +8,7 @@ module Amakanize
           ::Amakanize::Filters::NormalizationFilter.new,
           ::Amakanize::Filters::ParenthesesDeletionFilter.new,
           ::Amakanize::Filters::RoleNameDeletionFilter.new,
-          ::Amakanize::Filters::TrailingPayloadDeletionFilter.new,
+          ::Amakanize::Filters::TrailingAuthorNamePayloadDeletionFilter.new,
           ::Amakanize::Filters::SpaceDeletionFilter.new,
         ]
       end
