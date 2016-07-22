@@ -1,3 +1,6 @@
+## 0.1.1
+- Support x and X as roman numeric
+
 ## 0.1.0
 - Support roman numerals on series name
 - Support 第N巻 on series name
