@@ -5,7 +5,7 @@ module Amakanize
       # @param string [String] e.g. `"やはり俺の青春ラブコメはまちがっている。4"`
       # @return [String] e.g. `"やはり俺の青春ラブコメはまちがっている。"`
       def call(string)
-        string.gsub(/\s*第?[\dviVI１-９①②③④⑤⑥⑦⑧⑨⑩]+巻?\z/, "")
+        string.gsub(/\s*第?[\diIvVxX１-９①②③④⑤⑥⑦⑧⑨⑩]+巻?\z/, "")
       end
     end
   end
