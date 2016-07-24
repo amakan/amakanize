@@ -5,6 +5,9 @@ module Amakanize
         その他
         ほか
         他
+        原作
+        原案
+        漫画
       )
 
       # @note Override
