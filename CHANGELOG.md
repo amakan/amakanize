@@ -1,3 +1,6 @@
+## 0.1.2
+- Add AuthorNames class
+
 ## 0.1.1
 - Support x and X as roman numeric
 
