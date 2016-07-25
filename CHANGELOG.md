@@ -1,3 +1,7 @@
+## 0.1.4
+- Add more author name separator
+- Remove suffix role name
+
 ## 0.1.3
 - Remove trailing 原作・原案・漫画 of author name
 
