@@ -1,3 +1,6 @@
+## 0.1.5
+- Remove spaces between exclamations for 「ばくおん! !」
+
 ## 0.1.4
 - Add more author name separator
 - Remove suffix role name
