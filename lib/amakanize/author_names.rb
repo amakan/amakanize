@@ -3,6 +3,7 @@ module Amakanize
     include ::Enumerable
 
     AUTHOR_NAME_SEPARATORS = %w(
+      ・
       ,
       ，
       、
