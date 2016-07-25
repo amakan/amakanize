@@ -11,7 +11,7 @@ module Amakanize
       # @param string [String] e.g. `"漫画:ハノカゲ"`
       # @return [String] e.g. `"ハノカゲ"`
       def call(string)
-        string.gsub(%r<\A#{::Regexp.union(ROLE_NAMES)}[:/]>, "")
+        string.gsub(%r<\A#{::Regexp.union(ROLE_NAMES)}[:/]>, "").gsub(%r<[:/]#{::Regexp.union(ROLE_NAMES)}\z>, "")
       end
     end
   end

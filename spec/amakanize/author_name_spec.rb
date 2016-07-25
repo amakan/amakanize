@@ -12,6 +12,7 @@ RSpec.describe Amakanize::AuthorName do
       " 　ハノカゲ 　" => "ハノカゲ",
       "&lt;ハノカゲ&gt;" => "<ハノカゲ>",
       "ａｕｔｈｏｒ" => "author",
+      "BNGI/PROJECTiM@S:原作" => "BNGI/PROJECTiM@S",
       "ハノカゲ　ほか" => "ハノカゲ",
       "バンダイナムコゲームス 原作" => "バンダイナムコゲームス",
       "ぽんかん(8)" => "ぽんかん8",
