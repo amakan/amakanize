@@ -14,6 +14,7 @@ RSpec.describe Amakanize::AuthorName do
       "ａｕｔｈｏｒ" => "author",
       "BNGI/PROJECTiM@S:原作" => "BNGI/PROJECTiM@S",
       "ハノカゲ　ほか" => "ハノカゲ",
+      "ハノカゲ:漫画" => "ハノカゲ",
       "バンダイナムコゲームス 原作" => "バンダイナムコゲームス",
       "ぽんかん(8)" => "ぽんかん8",
       "ぽんかん（８）" => "ぽんかん8",
@@ -21,7 +22,6 @@ RSpec.describe Amakanize::AuthorName do
       "ぽんかん⑧" => "ぽんかん8",
       "渡 航" => "渡航",
       "渡　航" => "渡航",
-      "漫画:ハノカゲ" => "ハノカゲ",
       "漫画:ハノカゲ" => "ハノカゲ",
     }.each do |key, value|
       context "with #{key.inspect}" do
