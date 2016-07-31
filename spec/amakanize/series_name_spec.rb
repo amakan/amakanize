@@ -10,6 +10,7 @@ RSpec.describe Amakanize::SeriesName do
 
     {
       "D.Gray-man 25 (ジャンプコミックス)" => "D.Gray-man",
+      "D.Grayーman 10 (ジャンプコミックス)" => "D.Gray-man",
       "To LOVEる -とらぶる- ダークネス" => "To LOVEる",
       "To LOVEる -とらぶる-" => "To LOVEる",
       "アド・アストラ 1 ─スキピオとハンニバル─ (ヤングジャンプコミックス・ウルトラ)" => "アド・アストラ",
