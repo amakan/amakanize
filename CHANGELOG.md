@@ -1,3 +1,6 @@
+## 0.1.7
+- Remove trailing surrounding hyphens and payload on series name
+
 ## 0.1.6
 - Remove trailing dash and payload on series name
 
