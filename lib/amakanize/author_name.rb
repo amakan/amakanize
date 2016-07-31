@@ -6,6 +6,7 @@ module Amakanize
         @filters ||= [
           ::Amakanize::Filters::HtmlUnescapeFilter.new,
           ::Amakanize::Filters::NormalizationFilter.new,
+          ::Amakanize::Filters::HyphenMinusNormalizationFilter.new,
           ::Amakanize::Filters::ParenthesesDeletionFilter.new,
           ::Amakanize::Filters::RoleNameDeletionFilter.new,
           ::Amakanize::Filters::TrailingAuthorNamePayloadDeletionFilter.new,
