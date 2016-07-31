@@ -7,7 +7,7 @@ module Amakanize
           ::Amakanize::Filters::HtmlUnescapeFilter.new,
           ::Amakanize::Filters::NormalizationFilter.new,
           ::Amakanize::Filters::HyphenMinusNormalizationFilter.new,
-          ::Amakanize::Filters::HypthenBetweenAlhabetsDeletionFilter.new,
+          ::Amakanize::Filters::DashBetweenAlhabetsNormalizationFilter.new,
           ::Amakanize::Filters::SpacesBetweenExclamationsDeletionFilter.new,
           ::Amakanize::Filters::TrailingParenthesesDeletionFilter.new,
           ::Amakanize::Filters::TrailingSurroundingHyphensDeletionFilter.new,

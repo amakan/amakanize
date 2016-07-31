@@ -1,6 +1,6 @@
 module Amakanize
   module Filters
-    class HypthenBetweenAlhabetsDeletionFilter < BaseFilter
+    class DashBetweenAlhabetsNormalizationFilter < BaseFilter
       # @note Override
       # @param string [String] e.g. `"D.Grayーman"`
       # @return [String] e.g. `"D.Gray-man"`
