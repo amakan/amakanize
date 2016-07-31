@@ -18,6 +18,9 @@ module Amakanize
         ～
         ∼
         ─
+        -
+        ‐
+        ⁃
       )
 
       # @note Override
