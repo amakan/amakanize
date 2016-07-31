@@ -1,3 +1,6 @@
+## 0.1.9
+- Normalize hyphen with hyphen/minus
+
 ## 0.1.8
 - Normalize hyphen between alphabets in series name
 
