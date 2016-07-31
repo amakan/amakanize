@@ -1,3 +1,6 @@
+## 0.1.8
+- Normalize hyphen between alphabets in series name
+
 ## 0.1.7
 - Remove trailing surrounding hyphens and payload on series name
 
