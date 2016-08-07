@@ -22,6 +22,7 @@ RSpec.describe Amakanize::SeriesName do
       "ラブライブ! School idol diary ~星空凛~" => "ラブライブ! School idol diary",
       "僕だけがいない街 (1) (カドカワコミックス・エース)" => "僕だけがいない街",
       "冴えない彼女の育てかた (9)" => "冴えない彼女の育てかた",
+      "刀語 第十一話 毒刀・鍍 (ドクトウ・メッキ) (講談社BOX)" => "刀語",
       "東京レイヴンズEX1party in nest" => "東京レイヴンズEX1party in nest",
       "白騎士物語-episode.0-ドグマ戦記" => "白騎士物語",
       "神さまのいない日曜日VII (富士見ファンタジア文庫)" => "神さまのいない日曜日",
