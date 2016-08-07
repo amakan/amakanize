@@ -1,3 +1,6 @@
+## 0.1.10
+- Detect obvious volume number in product title
+
 ## 0.1.9
 - Normalize hyphen with hyphen/minus
 
