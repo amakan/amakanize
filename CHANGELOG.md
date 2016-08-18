@@ -1,3 +1,6 @@
+## 0.1.11
+- Improve volume detection for アニウッド大通り
+
 ## 0.1.10
 - Detect obvious volume number in product title
 
