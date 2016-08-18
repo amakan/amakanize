@@ -19,3 +19,7 @@ require "amakanize/filters/trailing_surrounding_hyphens_deletion_filter"
 require "amakanize/filters/trailing_volume_number_deletion_filter"
 require "amakanize/series_name"
 require "amakanize/version"
+
+module Amakanize
+  PATTERN_OF_NUMERIC_CHARACTER = /[\diIvVxX１-９①②③④⑤⑥⑦⑧⑨⑩〇一二三四五六七八九十百千万零壱弍参肆伍陸漆捌玖壹貳參拾佰仟萬]/
+end
