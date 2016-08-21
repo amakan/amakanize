@@ -1,3 +1,6 @@
+## 0.1.12
+- Support 第N版
+
 ## 0.1.11
 - Improve volume detection for アニウッド大通り
 
