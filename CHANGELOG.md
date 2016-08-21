@@ -1,3 +1,6 @@
+## 0.2.0
+- Fix author name separator
+
 ## 0.1.12
 - Support 第N版
 
