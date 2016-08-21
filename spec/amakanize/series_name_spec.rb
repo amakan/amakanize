@@ -9,6 +9,7 @@ RSpec.describe Amakanize::SeriesName do
     end
 
     {
+      "JavaScript 第6版" => "JavaScript",
       "D.Gray-man 25 (ジャンプコミックス)" => "D.Gray-man",
       "D.Gray‐man (4) (ジャンプ・コミックス)" => "D.Gray-man",
       "D.Grayーman 10 (ジャンプコミックス)" => "D.Gray-man",
