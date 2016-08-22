@@ -22,10 +22,10 @@ require "amakanize/version"
 
 module Amakanize
   PATTERN_OF_NUMERIC_CHARACTERS = /
-    \d+
+    \d+(?:\.\d+)?
     |[ivx]+
     |[IVX]+
-    |[０-９]+
+    |[０-９]+(?:．[０-９]+)?
     |①
     |②
     |③
