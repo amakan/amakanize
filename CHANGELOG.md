@@ -1,3 +1,6 @@
+## 0.4.2
+- Support #5
+
 ## 0.4.1
 - Support Vol.3
 - Support 3 通常版
