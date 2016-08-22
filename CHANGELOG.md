@@ -1,3 +1,7 @@
+## 0.3.0
+- Normalize all brackets into round brackets (parentheses)
+- Removes only trailing brackets
+
 ## 0.2.2
 - Support volume N
 
