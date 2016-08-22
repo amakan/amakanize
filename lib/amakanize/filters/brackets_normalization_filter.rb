@@ -2,11 +2,11 @@ module Amakanize
   module Filters
     class BracketsNormalizationFilter < BaseFilter
       PAIRS = %w|
-          ‹ ›
         ‾ ‾
         - -
         ― ―
         〜 〜
+        ‹ ›
         « »
         （ ）
         ［ ］
