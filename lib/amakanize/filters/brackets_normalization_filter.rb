@@ -5,6 +5,7 @@ module Amakanize
           ‹ ›
         ‾ ‾
         - -
+        ― ―
         〜 〜
         « »
         （ ）
