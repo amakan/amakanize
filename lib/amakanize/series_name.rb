@@ -13,6 +13,7 @@ module Amakanize
           ::Amakanize::Filters::ObviousVolumeNumberDeletionFilter.new,
           ::Amakanize::Filters::TrailingParenthesesDeletionFilter.new,
           ::Amakanize::Filters::TrailingDashDeletionFilter.new,
+          ::Amakanize::Filters::TrailingSeriesNamePayloadDeletionFilter.new,
           ::Amakanize::Filters::TrailingVolumeNumberDeletionFilter.new,
           ::Amakanize::Filters::TrailingSeriesNamePayloadDeletionFilter.new,
         ]
