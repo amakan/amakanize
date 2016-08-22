@@ -22,5 +22,21 @@ require "amakanize/series_name"
 require "amakanize/version"
 
 module Amakanize
-  PATTERN_OF_NUMERIC_CHARACTER = /[\diIvVxX１-９①②③④⑤⑥⑦⑧⑨⑩〇一二三四五六七八九十百千万零壱弍参肆伍陸漆捌玖壹貳參拾佰仟萬]/
+  PATTERN_OF_NUMERIC_CHARACTERS = /
+    \d+
+    |[ivx]+
+    |[IVX]+
+    |[０-９]+
+    |①
+    |②
+    |③
+    |④
+    |⑤
+    |⑥
+    |⑦
+    |⑧
+    |⑨
+    |⑩
+    |[〇一二三四五六七八九十百千万零壱弍参肆伍陸漆捌玖壹貳參拾佰仟萬]+
+  /x
 end
