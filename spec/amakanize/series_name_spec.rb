@@ -9,6 +9,7 @@ RSpec.describe Amakanize::SeriesName do
     end
 
     {
+      "ネトゲの嫁は女の子じゃないと思った? Lv.2 (電撃文庫)" => "ネトゲの嫁は女の子じゃないと思った?",
       "JavaScript 第6版" => "JavaScript",
       "D.Gray-man 25 (ジャンプコミックス)" => "D.Gray-man",
       "D.Gray‐man (4) (ジャンプ・コミックス)" => "D.Gray-man",
