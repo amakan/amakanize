@@ -1,3 +1,6 @@
+## 0.2.2
+- Support volume N
+
 ## 0.2.1
 - Normalize angle brackets
 - Remove trailing LvN and Lv.N as volume number
