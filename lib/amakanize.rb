@@ -1,6 +1,7 @@
 require "amakanize/author_name"
 require "amakanize/author_names"
 require "amakanize/filters/base_filter"
+require "amakanize/filters/angle_brackets_after_word_normalization_filter"
 require "amakanize/filters/dash_between_alphabets_normalization_filter"
 require "amakanize/filters/html_unescape_filter"
 require "amakanize/filters/hyphen_minus_normalization_filter"

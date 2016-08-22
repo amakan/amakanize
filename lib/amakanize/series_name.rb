@@ -8,6 +8,7 @@ module Amakanize
           ::Amakanize::Filters::NormalizationFilter.new,
           ::Amakanize::Filters::HyphenMinusNormalizationFilter.new,
           ::Amakanize::Filters::DashBetweenAlhabetsNormalizationFilter.new,
+          ::Amakanize::Filters::AngleBracketsAfterWordNormalizationFilter.new,
           ::Amakanize::Filters::SpacesBetweenExclamationsDeletionFilter.new,
           ::Amakanize::Filters::ObviousVolumeNumberDeletionFilter.new,
           ::Amakanize::Filters::TrailingParenthesesDeletionFilter.new,
