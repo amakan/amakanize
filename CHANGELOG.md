@@ -1,3 +1,8 @@
+## 0.4.1
+- Support Vol.3
+- Support 3 通常版
+- Support 7.5
+
 ## 0.4.0
 - Add spaces around brackets except for ending
 - Treat `―XXX―` as brackets (e.g. To LOVEる―とらぶる―)
