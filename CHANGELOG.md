@@ -1,3 +1,8 @@
+## 0.2.1
+- Normalize angle brackets
+- Remove trailing LvN and Lv.N as volume number
+- Fix volume number detection pattern
+
 ## 0.2.0
 - Fix author name separator
 
