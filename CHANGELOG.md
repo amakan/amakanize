@@ -1,3 +1,7 @@
+## 0.4.0
+- Add spaces around brackets except for ending
+- Treat `―XXX―` as brackets (e.g. To LOVEる―とらぶる―)
+
 ## 0.3.0
 - Normalize all brackets into round brackets (parentheses)
 - Removes only trailing brackets
