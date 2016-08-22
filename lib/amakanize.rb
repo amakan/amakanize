@@ -44,9 +44,9 @@ module Amakanize
     |Episode\.?\s*
     |EPISODE\.?\s*
     |Lv\.?\s*
-    |volume\.?\s*
-    |Volume\.?\s*
-    |VOLUME\.?\s*
+    |vol(?:ume)?\.?\s*
+    |Vol(?:ume)?\.?\s*
+    |VOL(?:UME)?\.?\s*
     |第
   /x
 end
