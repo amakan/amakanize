@@ -41,6 +41,7 @@ module Amakanize
 
   PATTERN_OF_VOLUME_PREFIX = /
     episode\.?\s*
+    |\#
     |Episode\.?\s*
     |EPISODE\.?\s*
     |Lv\.?\s*
