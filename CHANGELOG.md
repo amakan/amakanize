@@ -1,3 +1,7 @@
+## 0.4.3
+- Support (原作・イラスト)XXX
+- Support イラスト:XXX
+
 ## 0.4.2
 - Support #5
 
