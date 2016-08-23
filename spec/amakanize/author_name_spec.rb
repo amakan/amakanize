@@ -10,9 +10,13 @@ RSpec.describe Amakanize::AuthorName do
 
     {
       " 　ハノカゲ 　" => "ハノカゲ",
+      "(原作・イラスト)Cygames" => "Cygames",
+      "(原作)Cygames" => "Cygames",
       "&lt;ハノカゲ&gt;" => "<ハノカゲ>",
       "ａｕｔｈｏｒ" => "author",
       "BNGI/PROJECTiM@S:原作" => "BNGI/PROJECTiM@S",
+      "Cygames(原作・イラスト)" => "Cygames",
+      "Cygames(原作)" => "Cygames",
       "ハノカゲ　ほか" => "ハノカゲ",
       "ハノカゲ:漫画" => "ハノカゲ",
       "バンダイナムコゲームス 原作" => "バンダイナムコゲームス",
