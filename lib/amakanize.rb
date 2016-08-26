@@ -37,6 +37,11 @@ module Amakanize
     |⑦
     |⑧
     |⑨
+    |上
+    |下
+    |中
+    |前
+    |後
   /x
 
   PATTERN_OF_VOLUME_PREFIX = /
