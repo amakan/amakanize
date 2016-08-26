@@ -1,3 +1,6 @@
+## 0.4.4
+- Support (前) (後) (上) (中) (下)
+
 ## 0.4.3
 - Support (原作・イラスト)XXX
 - Support イラスト:XXX
