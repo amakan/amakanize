@@ -8,6 +8,8 @@ module Amakanize
         string.gsub(/\s*#{PATTERN_OF_VOLUME_PREFIX}?#{Amakanize::PATTERN_OF_NUMERIC_CHARACTERS}(?:話|巻|版).*/, "")
           .gsub(/\s+#{PATTERN_OF_VOLUME_PREFIX}?#{Amakanize::PATTERN_OF_NUMERIC_CHARACTERS}(?:話|巻|版)?:\s+.*/, "")
           .gsub(/\s*\(#{PATTERN_OF_VOLUME_PREFIX}?#{Amakanize::PATTERN_OF_NUMERIC_CHARACTERS}\).*/, "")
+          .gsub(/\s*\d+年\s*\d+(?:月|\/\d+\s*)号.*/, "")
+          .gsub(/\s*\d{4}\s*(?:AUTUMN|SPRING|SUMMER|WINTER)/, "")
       end
     end
   end
