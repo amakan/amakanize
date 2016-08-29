@@ -1,3 +1,6 @@
+## 0.4.5
+- Support 2016年04月号 for magazines
+
 ## 0.4.4
 - Support (前) (後) (上) (中) (下)
 
