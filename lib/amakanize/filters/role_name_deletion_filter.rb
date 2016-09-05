@@ -4,6 +4,7 @@ module Amakanize
       PATTERN_OF_ROLE_NAME = ::Regexp.union(
         %w(
           イラスト
+          キャラクター原案
           原作
           原案
           漫画
@@ -14,8 +15,11 @@ module Amakanize
       # @param string [String] e.g. `"漫画:ハノカゲ"`,  `"ハノカゲ:漫画"`
       # @return [String] e.g. `"ハノカゲ"`
       def call(string)
-        string.gsub(%r<\A#{PATTERN_OF_ROLE_NAME}[:/]>, "").gsub(%r<[:/]#{PATTERN_OF_ROLE_NAME}\z>, "")
-          .gsub(%r<\A\(#{PATTERN_OF_ROLE_NAME}(?:・#{PATTERN_OF_ROLE_NAME})*\)>, "").gsub(%r<\(#{PATTERN_OF_ROLE_NAME}(?:・#{PATTERN_OF_ROLE_NAME})*\)\z>, "")
+        string
+          .gsub(%r<\A#{PATTERN_OF_ROLE_NAME}[:/]>, "")
+          .gsub(%r<[:/]#{PATTERN_OF_ROLE_NAME}\z>, "")
+          .gsub(%r<\A\(#{PATTERN_OF_ROLE_NAME}(?:・#{PATTERN_OF_ROLE_NAME})*\)>, "")
+          .gsub(%r<\(#{PATTERN_OF_ROLE_NAME}(?:・#{PATTERN_OF_ROLE_NAME})*\)\z>, "")
       end
     end
   end

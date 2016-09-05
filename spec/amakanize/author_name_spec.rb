@@ -10,6 +10,7 @@ RSpec.describe Amakanize::AuthorName do
 
     {
       " 　ハノカゲ 　" => "ハノカゲ",
+      "(キャラクター原案)ハラカズヒロ" => "ハラカズヒロ",
       "(原作・イラスト)Cygames" => "Cygames",
       "(原作)Cygames" => "Cygames",
       "&lt;ハノカゲ&gt;" => "<ハノカゲ>",
