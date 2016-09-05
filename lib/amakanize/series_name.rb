@@ -10,6 +10,7 @@ module Amakanize
           ::Amakanize::Filters::DashBetweenAlhabetsNormalizationFilter.new,
           ::Amakanize::Filters::BracketsNormalizationFilter.new,
           ::Amakanize::Filters::SpacesBetweenExclamationsDeletionFilter.new,
+          ::Amakanize::Filters::SpaceBetweenExclamationAndBracketDeletionFilter.new,
           ::Amakanize::Filters::ObviousVolumeNumberDeletionFilter.new,
           ::Amakanize::Filters::TrailingParenthesesDeletionFilter.new,
           ::Amakanize::Filters::TrailingDashDeletionFilter.new,
