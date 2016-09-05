@@ -1,3 +1,7 @@
+## 0.4.6
+- Treat (キャラクター原案)ハラカズヒロ as ハラカズヒロ
+- Normalize 「x! 」 into 「x!」
+
 ## 0.4.5
 - Support 2016年04月号 for magazines
 
