@@ -18,6 +18,7 @@ RSpec.describe Amakanize::AuthorName do
       "BNGI/PROJECTiM@S:原作" => "BNGI/PROJECTiM@S",
       "Cygames(原作・イラスト)" => "Cygames",
       "Cygames(原作)" => "Cygames",
+      "カバーデザイン:土井宏明(ポジトロン)" => "土井宏明(ポジトロン)",
       "ハノカゲ　ほか" => "ハノカゲ",
       "ハノカゲ:漫画" => "ハノカゲ",
       "バンダイナムコゲームス 原作" => "バンダイナムコゲームス",

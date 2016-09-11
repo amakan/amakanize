@@ -4,6 +4,7 @@ module Amakanize
       PATTERN_OF_ROLE_NAME = ::Regexp.union(
         %w(
           イラスト
+          カバーデザイン
           キャラクター原案
           原作
           原案
