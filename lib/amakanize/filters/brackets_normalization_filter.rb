@@ -29,7 +29,7 @@ module Amakanize
       # @return [String] e.g. `"IS (インフィニット・ストラトス) 1 (オーバーラップ文庫)"`
       def call(string)
         PAIRS.each_with_object(string) do |(open, close), result|
-          result.gsub!(/#{open}(.+?)#{close}/, '(\1)')
+          result.gsub!(/#{open}([^\(]+?)#{close}/, '(\1)')
         end.gsub(/\s*\((.+?)\)(?:\z|(\s*))/) do
           " \(#{$1})#{' ' if $2}"
         end

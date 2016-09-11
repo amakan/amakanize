@@ -9,6 +9,7 @@ RSpec.describe Amakanize::SeriesName do
     end
 
     {
+      "ＢＬＯＯＤ‐Ｃ　（１） (角川コミックス・エース 162-9)" => "BLOOD-C",
       "Buso Renkin, Vol. 5" => "Buso Renkin",
       "D.Gray-man 25 (ジャンプコミックス)" => "D.Gray-man",
       "D.Gray‐man (4) (ジャンプ・コミックス)" => "D.Gray-man",
