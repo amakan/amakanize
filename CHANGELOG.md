@@ -1,3 +1,6 @@
+## 0.4.7
+- Support "Buso Renkin, Vol. 5"
+
 ## 0.4.6
 - Treat (キャラクター原案)ハラカズヒロ as ハラカズヒロ
 - Normalize 「x! 」 into 「x!」
