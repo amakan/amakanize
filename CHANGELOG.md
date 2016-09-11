@@ -1,3 +1,6 @@
+## 0.4.9
+- Fix a bug in the brackets normalization logic
+
 ## 0.4.8
 - Treat カバーデザイン as role name
 
