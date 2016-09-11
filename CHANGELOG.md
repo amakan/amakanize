@@ -1,3 +1,6 @@
+## 0.4.8
+- Treat カバーデザイン as role name
+
 ## 0.4.7
 - Support "Buso Renkin, Vol. 5"
 
