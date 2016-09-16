@@ -1,3 +1,7 @@
+## 0.5.0
+- Remove volume number only one time
+- Normalize continuous spaces
+
 ## 0.4.9
 - Fix a bug in the brackets normalization logic
 
