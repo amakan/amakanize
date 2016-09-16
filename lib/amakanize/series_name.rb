@@ -6,6 +6,7 @@ module Amakanize
         @filters ||= [
           ::Amakanize::Filters::HtmlUnescapeFilter.new,
           ::Amakanize::Filters::NormalizationFilter.new,
+          ::Amakanize::Filters::ContinuousSpacesNormalizationFilter.new,
           ::Amakanize::Filters::HyphenMinusNormalizationFilter.new,
           ::Amakanize::Filters::DashBetweenAlhabetsNormalizationFilter.new,
           ::Amakanize::Filters::BracketsNormalizationFilter.new,
