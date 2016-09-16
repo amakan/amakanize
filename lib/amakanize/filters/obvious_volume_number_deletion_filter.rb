@@ -1,15 +1,30 @@
 module Amakanize
   module Filters
     class ObviousVolumeNumberDeletionFilter < BaseFilter
+      PATTERN = Regexp.union(
+        /\s*#{::Amakanize::PATTERN_OF_VOLUME_PREFIX}?#{::Amakanize::PATTERN_OF_NUMERIC_CHARACTERS}(?:話|巻|版).*/,
+        /\s+#{::Amakanize::PATTERN_OF_VOLUME_PREFIX}?#{::Amakanize::PATTERN_OF_NUMERIC_CHARACTERS}(?:話|巻|版)?:\s+.*/,
+        /\s+#{::Amakanize::PATTERN_OF_VOLUME_PREFIX}#{::Amakanize::PATTERN_OF_NUMERIC_CHARACTERS}\s+.*/,
+        /\s+Lv\.?\s*#{::Amakanize::PATTERN_OF_NUMERIC_CHARACTERS}(?:\s+.*|\z)/,
+        /\s*\(#{::Amakanize::PATTERN_OF_VOLUME_PREFIX}?#{::Amakanize::PATTERN_OF_NUMERIC_CHARACTERS}\).*/,
+        /\s*\d+年\s*\d+(?:月|\/\d+\s*)号.*/,
+        /\s*\d{4}\s*(?:AUTUMN|SPRING|SUMMER|WINTER)/,
+      )
+
       # @note Override
-      # @param string [String] e.g. `"刀語 第十一話 毒刀・鍍"`, `"アニウッド大通り 1: アニメ監督一家物語"`
-      # @return [String] e.g. `"刀語"`, `"アニウッド大通り"`
-      def call(string)
-        string.gsub(/\s*#{PATTERN_OF_VOLUME_PREFIX}?#{Amakanize::PATTERN_OF_NUMERIC_CHARACTERS}(?:話|巻|版).*/, "")
-          .gsub(/\s+#{PATTERN_OF_VOLUME_PREFIX}?#{Amakanize::PATTERN_OF_NUMERIC_CHARACTERS}(?:話|巻|版)?:\s+.*/, "")
-          .gsub(/\s*\(#{PATTERN_OF_VOLUME_PREFIX}?#{Amakanize::PATTERN_OF_NUMERIC_CHARACTERS}\).*/, "")
-          .gsub(/\s*\d+年\s*\d+(?:月|\/\d+\s*)号.*/, "")
-          .gsub(/\s*\d{4}\s*(?:AUTUMN|SPRING|SUMMER|WINTER)/, "")
+      # @param output [String] e.g. `"刀語 第十一話 毒刀・鍍"`, `"アニウッド大通り 1: アニメ監督一家物語"`
+      # @return [Hash] e.g. `"刀語"`, `"アニウッド大通り"`
+      def call(context:, output:)
+        unless context[:volume_number_removed]
+          output = output.sub(PATTERN) do
+            context[:volume_number_removed] = true
+            ""
+          end
+        end
+        {
+          context: context,
+          output: output,
+        }
       end
     end
   end

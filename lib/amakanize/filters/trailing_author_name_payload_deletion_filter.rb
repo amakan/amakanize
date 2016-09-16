@@ -11,10 +11,13 @@ module Amakanize
       )
 
       # @note Override
-      # @param string [String] e.g. `"ハノカゲ　ほか"`
-      # @return [String] e.g. `"ハノカゲ"`
-      def call(string)
-        string.gsub(/\s+#{::Regexp.union(PAYLOADS)}\z/, "")
+      # @param output [String] e.g. `"ハノカゲ　ほか"`
+      # @return [Hash] e.g. `"ハノカゲ"`
+      def call(context:, output:)
+        {
+          context: context,
+          output: output.gsub(/\s+#{::Regexp.union(PAYLOADS)}\z/, ""),
+        }
       end
     end
   end

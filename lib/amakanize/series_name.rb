@@ -1,23 +1,23 @@
 module Amakanize
   class SeriesName
     class << self
-      # @return [Array<Amakan::Filters::BaseFilter>]
-      def filters
-        @filters ||= [
-          ::Amakanize::Filters::HtmlUnescapeFilter.new,
-          ::Amakanize::Filters::NormalizationFilter.new,
-          ::Amakanize::Filters::ContinuousSpacesNormalizationFilter.new,
-          ::Amakanize::Filters::HyphenMinusNormalizationFilter.new,
-          ::Amakanize::Filters::DashBetweenAlhabetsNormalizationFilter.new,
-          ::Amakanize::Filters::BracketsNormalizationFilter.new,
-          ::Amakanize::Filters::SpacesBetweenExclamationsDeletionFilter.new,
-          ::Amakanize::Filters::SpaceBetweenExclamationAndBracketDeletionFilter.new,
-          ::Amakanize::Filters::ObviousVolumeNumberDeletionFilter.new,
-          ::Amakanize::Filters::TrailingParenthesesDeletionFilter.new,
-          ::Amakanize::Filters::TrailingDashDeletionFilter.new,
-          ::Amakanize::Filters::TrailingSeriesNamePayloadDeletionFilter.new,
-          ::Amakanize::Filters::TrailingVolumeNumberDeletionFilter.new,
-          ::Amakanize::Filters::TrailingSeriesNamePayloadDeletionFilter.new,
+      # @return [Array<Class>]
+      def filter_classes
+        @filter_classes ||= [
+          ::Amakanize::Filters::HtmlUnescapeFilter,
+          ::Amakanize::Filters::NormalizationFilter,
+          ::Amakanize::Filters::ContinuousSpacesNormalizationFilter,
+          ::Amakanize::Filters::HyphenMinusNormalizationFilter,
+          ::Amakanize::Filters::DashBetweenAlhabetsNormalizationFilter,
+          ::Amakanize::Filters::BracketsNormalizationFilter,
+          ::Amakanize::Filters::SpacesBetweenExclamationsDeletionFilter,
+          ::Amakanize::Filters::SpaceBetweenExclamationAndBracketDeletionFilter,
+          ::Amakanize::Filters::ObviousVolumeNumberDeletionFilter,
+          ::Amakanize::Filters::TrailingParenthesesDeletionFilter,
+          ::Amakanize::Filters::TrailingDashDeletionFilter,
+          ::Amakanize::Filters::TrailingSeriesNamePayloadDeletionFilter,
+          ::Amakanize::Filters::TrailingVolumeNumberDeletionFilter,
+          ::Amakanize::Filters::TrailingSeriesNamePayloadDeletionFilter,
         ]
       end
     end
@@ -29,9 +29,15 @@ module Amakanize
 
     # @note Override
     def to_s
-      self.class.filters.inject(@raw) do |result, filter|
+      filters.inject(context: {}, output: @raw) do |result, filter|
         filter.call(result)
-      end
+      end[:output]
+    end
+
+    private
+
+    def filters
+      @filters ||= self.class.filter_classes.map(&:new)
     end
   end
 end

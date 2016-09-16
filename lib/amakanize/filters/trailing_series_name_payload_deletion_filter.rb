@@ -3,13 +3,17 @@ module Amakanize
     class TrailingSeriesNamePayloadDeletionFilter < BaseFilter
       PAYLOADS = %w(
         通常版
+        (未分類)
       )
 
       # @note Override
-      # @param string [String] e.g. `"魔法使いの嫁 通常版"`
-      # @return [String] e.g. `"魔法使いの嫁"`
-      def call(string)
-        string.gsub(/\s+#{::Regexp.union(PAYLOADS)}\z/, "")
+      # @param output [String] e.g. `"魔法使いの嫁 通常版"`
+      # @return [Hash] e.g. `"魔法使いの嫁"`
+      def call(context:, output:)
+        {
+          context: context,
+          output: output.gsub(/\s+#{::Regexp.union(PAYLOADS)}\z/, ""),
+        }
       end
     end
   end

@@ -1,16 +1,16 @@
 module Amakanize
   class AuthorName
     class << self
-      # @return [Array<Amakan::Filters::BaseFilter>]
-      def filters
-        @filters ||= [
-          ::Amakanize::Filters::HtmlUnescapeFilter.new,
-          ::Amakanize::Filters::NormalizationFilter.new,
-          ::Amakanize::Filters::HyphenMinusNormalizationFilter.new,
-          ::Amakanize::Filters::ParenthesesDeletionFilter.new,
-          ::Amakanize::Filters::RoleNameDeletionFilter.new,
-          ::Amakanize::Filters::TrailingAuthorNamePayloadDeletionFilter.new,
-          ::Amakanize::Filters::SpaceDeletionFilter.new,
+      # @return [Array<Class>]
+      def filter_classes
+        @filter_classes ||= [
+          ::Amakanize::Filters::HtmlUnescapeFilter,
+          ::Amakanize::Filters::NormalizationFilter,
+          ::Amakanize::Filters::HyphenMinusNormalizationFilter,
+          ::Amakanize::Filters::ParenthesesDeletionFilter,
+          ::Amakanize::Filters::RoleNameDeletionFilter,
+          ::Amakanize::Filters::TrailingAuthorNamePayloadDeletionFilter,
+          ::Amakanize::Filters::SpaceDeletionFilter,
         ]
       end
     end
@@ -22,9 +22,15 @@ module Amakanize
 
     # @note Override
     def to_s
-      self.class.filters.inject(@raw) do |result, filter|
+      filters.inject(context: {}, output: @raw) do |result, filter|
         filter.call(result)
-      end
+      end[:output]
+    end
+
+    private
+
+    def filters
+      @filters ||= self.class.filter_classes.map(&:new)
     end
   end
 end

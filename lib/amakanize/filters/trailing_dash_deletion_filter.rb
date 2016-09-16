@@ -21,10 +21,13 @@ module Amakanize
       )
 
       # @note Override
-      # @param string [String] e.g. `"アド・アストラ 1 ─スキピオとハンニバル─"`
-      # @return [String] e.g. `"アド・アストラ 1"`
-      def call(string)
-        string.gsub(/\s*#{::Regexp.union(TOKENS)}.*/, "")
+      # @param output [String] e.g. `"アド・アストラ 1 ─スキピオとハンニバル─"`
+      # @return [Hash] e.g. `"アド・アストラ 1"`
+      def call(context:, output:)
+        {
+          context: context,
+          output: output.gsub(/\s*#{::Regexp.union(TOKENS)}.*/, ""),
+        }
       end
     end
   end

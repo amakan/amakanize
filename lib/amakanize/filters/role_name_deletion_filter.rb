@@ -13,14 +13,17 @@ module Amakanize
       )
 
       # @note Override
-      # @param string [String] e.g. `"漫画:ハノカゲ"`,  `"ハノカゲ:漫画"`
-      # @return [String] e.g. `"ハノカゲ"`
-      def call(string)
-        string
-          .gsub(%r<\A#{PATTERN_OF_ROLE_NAME}[:/]>, "")
-          .gsub(%r<[:/]#{PATTERN_OF_ROLE_NAME}\z>, "")
-          .gsub(%r<\A\(#{PATTERN_OF_ROLE_NAME}(?:・#{PATTERN_OF_ROLE_NAME})*\)>, "")
-          .gsub(%r<\(#{PATTERN_OF_ROLE_NAME}(?:・#{PATTERN_OF_ROLE_NAME})*\)\z>, "")
+      # @param output [String] e.g. `"漫画:ハノカゲ"`,  `"ハノカゲ:漫画"`
+      # @return [Hash] e.g. `"ハノカゲ"`
+      def call(context:, output:)
+        {
+          context: context,
+          output: output
+            .gsub(%r<\A#{PATTERN_OF_ROLE_NAME}[:/]>, "")
+            .gsub(%r<[:/]#{PATTERN_OF_ROLE_NAME}\z>, "")
+            .gsub(%r<\A\(#{PATTERN_OF_ROLE_NAME}(?:・#{PATTERN_OF_ROLE_NAME})*\)>, "")
+            .gsub(%r<\(#{PATTERN_OF_ROLE_NAME}(?:・#{PATTERN_OF_ROLE_NAME})*\)\z>, ""),
+        }
       end
     end
   end

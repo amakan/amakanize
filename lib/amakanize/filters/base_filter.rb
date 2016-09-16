@@ -1,9 +1,10 @@
 module Amakanize
   module Filters
     class BaseFilter
-      # @param string [String]
-      # @return [String]
-      def call(string)
+      # @param context [Hash]
+      # @param output [String]
+      # @return [Hash]
+      def call(context:, output:)
         raise ::NotImplementedError
       end
     end

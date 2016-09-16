@@ -2,10 +2,13 @@ module Amakanize
   module Filters
     class SpaceBetweenExclamationAndBracketDeletionFilter < BaseFilter
       # @note Override
-      # @param string [String] e.g. `"まおゆう魔王勇者 「この我のものとなれ、勇者よ」「断る! 」"`
-      # @return [String] e.g. `"まおゆう魔王勇者 「この我のものとなれ、勇者よ」「断る!」"`
-      def call(string)
-        string.gsub(/!\s+」/, "!」")
+      # @param output [String] e.g. `"まおゆう魔王勇者 「この我のものとなれ、勇者よ」「断る! 」"`
+      # @return [Hash] e.g. `"まおゆう魔王勇者 「この我のものとなれ、勇者よ」「断る!」"`
+      def call(context:, output:)
+        {
+          context: context,
+          output: output.gsub(/!\s+」/, "!」"),
+        }
       end
     end
   end
