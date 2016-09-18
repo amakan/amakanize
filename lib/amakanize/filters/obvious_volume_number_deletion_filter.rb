@@ -7,7 +7,7 @@ module Amakanize
         /\s+#{::Amakanize::PATTERN_OF_VOLUME_PREFIX}#{::Amakanize::PATTERN_OF_NUMERIC_CHARACTERS}\s+.*/,
         /\s+Lv\.?\s*#{::Amakanize::PATTERN_OF_NUMERIC_CHARACTERS}(?:\s+.*|\z)/,
         /\s*\(#{::Amakanize::PATTERN_OF_VOLUME_PREFIX}?#{::Amakanize::PATTERN_OF_NUMERIC_CHARACTERS}\).*/,
-        /\s*\d+年\s*\d+(?:月|\/\d+\s*)号.*/,
+        /\s*\d+年\s*\d+\s*(?:月|\/\d+\s*)号.*/,
         /\s*\d{4}\s*(?:AUTUMN|SPRING|SUMMER|WINTER)/,
       )
 
