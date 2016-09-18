@@ -1,3 +1,6 @@
+## 0.5.1
+- Detect アフタヌーン from アフタヌーン 2016年 05 月号
+
 ## 0.5.0
 - Remove volume number only one time
 - Normalize continuous spaces
