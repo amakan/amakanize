@@ -21,8 +21,8 @@ module Amakanize
           output: output
             .gsub(%r<\A#{PATTERN_OF_ROLE_NAME}[:/]>, "")
             .gsub(%r<[:/]#{PATTERN_OF_ROLE_NAME}\z>, "")
-            .gsub(%r<\A\(#{PATTERN_OF_ROLE_NAME}(?:・#{PATTERN_OF_ROLE_NAME})*\)>, "")
-            .gsub(%r<\(#{PATTERN_OF_ROLE_NAME}(?:・#{PATTERN_OF_ROLE_NAME})*\)\z>, ""),
+            .gsub(/\A\(#{PATTERN_OF_ROLE_NAME}(?:・#{PATTERN_OF_ROLE_NAME})*\)/, "")
+            .gsub(/\(#{PATTERN_OF_ROLE_NAME}(?:・#{PATTERN_OF_ROLE_NAME})*\)\z/, ""),
         }
       end
     end

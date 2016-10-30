@@ -8,7 +8,7 @@ module Amakanize
       def call(context:, output:)
         {
           context: context,
-          output: output.gsub("‐", "-"),
+          output: output.tr("‐", "-"),
         }
       end
     end

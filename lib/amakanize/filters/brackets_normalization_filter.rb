@@ -33,7 +33,7 @@ module Amakanize
           output: PAIRS.each_with_object(output) do |(open, close), result|
             result.gsub!(/#{open}([^\(]+?)#{close}/, '(\1)')
           end.gsub(/\s*\((.+?)\)(?:\z|(\s*))/) do
-            " \(#{$1})#{' ' if $2}"
+            " \(#{::Regexp.last_match(1)})#{' ' if Regexp.last_match(2)}"
           end
         }
       end
