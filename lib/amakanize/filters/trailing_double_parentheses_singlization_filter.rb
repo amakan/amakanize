@@ -7,7 +7,9 @@ module Amakanize
       def call(context:, output:)
         {
           context: context,
-          output: output.sub(/\([^\(^\)]+?\([^\(]+?\)[^\)^\(]+?\)\z/){ '(' + $&.gsub(/[\(\)]/,'') + ')' },
+          output: output.sub(/\([^\(^\)]+?\([^\(]+?\)[^\)^\(]+?\)\z/) do
+            "(" + $&.gsub(/[\(\)]/, "") + ")"
+          end,
         }
       end
     end
