@@ -1,3 +1,7 @@
+## v0.5.2
+
+- Support nested parentheses
+
 ## v0.5.1
 
 - Detect アフタヌーン from アフタヌーン 2016年 05 月号
