@@ -13,6 +13,7 @@ module Amakanize
           ::Amakanize::Filters::SpacesBetweenExclamationsDeletionFilter,
           ::Amakanize::Filters::SpaceBetweenExclamationAndBracketDeletionFilter,
           ::Amakanize::Filters::ObviousVolumeNumberDeletionFilter,
+          ::Amakanize::Filters::TrailingDoubleParenthesesSinglizationFilter,
           ::Amakanize::Filters::TrailingParenthesesDeletionFilter,
           ::Amakanize::Filters::TrailingDashDeletionFilter,
           ::Amakanize::Filters::TrailingSeriesNamePayloadDeletionFilter,
