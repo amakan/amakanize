@@ -9,6 +9,7 @@ module Amakanize
         /\s*\(#{::Amakanize::PATTERN_OF_VOLUME_PREFIX}?#{::Amakanize::PATTERN_OF_NUMERIC_CHARACTERS}\).*/,
         %r<\s*\d+年\s*\d+\s*(?:月|/\d+\s*)号.*>,
         /\s*\d{4}\s*(?:AUTUMN|SPRING|SUMMER|WINTER)/,
+        /\s*\d+年\s*\d+\s*号.*/,
       )
 
       # @note Override
