@@ -1,3 +1,7 @@
+## v0.5.3
+
+- Support weekly magazine format in series detection
+
 ## v0.5.2
 
 - Support nested parentheses
