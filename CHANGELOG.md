@@ -1,4 +1,4 @@
-## Unreleased
+## 0.6.0
 
 - Add `Amakanize::VideoPosition`
 - Rename author name from "r7kamura" to "Ryo Nakamura"
