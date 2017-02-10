@@ -1,4 +1,8 @@
-# Amakanize [![Build Status](https://travis-ci.org/amakan/amakanize.svg?branch=master)](https://travis-ci.org/amakan/amakanize)
+# Amakanize
+
+[![CircleCI](https://img.shields.io/circleci/project/github/amakan/amakanize.svg)](https://circleci.com/gh/amakan/amakanize)
+[![Gem Version](https://badge.fury.io/rb/amakanize.svg)](https://rubygems.org/gems/amakanize)
+[![Documentation](http://img.shields.io/badge/docs-rdoc.info-blue.svg)](http://www.rubydoc.info/github/amakan/amakanize)
 
 Utilities to canonicalize series names and author names for [amakan.net](https://amakan.net/).
 
