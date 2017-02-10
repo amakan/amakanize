@@ -1,6 +1,7 @@
 ## Unreleased
 
 - Rename author name from "r7kamura" to "Ryo Nakamura"
+- Set required Ruby version to 2.2.2 or higher for ActiveSupport
 
 ## 0.5.3
 

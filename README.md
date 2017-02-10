@@ -2,6 +2,10 @@
 
 Utilities to canonicalize series names and author names for [amakan.net](https://amakan.net/).
 
+## Requirements
+
+- Ruby 2.2.2 or higher
+
 ## Usage
 
 ```rb
