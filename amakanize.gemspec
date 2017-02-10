@@ -5,7 +5,7 @@ require "amakanize/version"
 Gem::Specification.new do |spec|
   spec.name          = "amakanize"
   spec.version       = Amakanize::VERSION
-  spec.authors       = ["r7kamura"]
+  spec.authors       = ["Ryo Nakamura"]
   spec.email         = ["r7kamura@gmail.com"]
   spec.summary       = "Utilities to canonicalize series names and author names."
   spec.homepage      = "https://github.com/amakan/amakanize"

@@ -1,3 +1,7 @@
+## Unreleased
+
+- Rename author name from "r7kamura" to "Ryo Nakamura"
+
 ## v0.5.3
 
 - Support weekly magazine format in series detection
