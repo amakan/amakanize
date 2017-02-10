@@ -1,5 +1,7 @@
 module Amakanize
   class SeriesName
+    include ::Amakanize::Filterable
+
     class << self
       # @return [Array<Class>]
       def filter_classes
@@ -21,24 +23,6 @@ module Amakanize
           ::Amakanize::Filters::TrailingSeriesNamePayloadDeletionFilter,
         ]
       end
-    end
-
-    # @param raw [String]
-    def initialize(raw)
-      @raw = raw
-    end
-
-    # @note Override
-    def to_s
-      filters.inject(context: {}, output: @raw) do |result, filter|
-        filter.call(result)
-      end[:output]
-    end
-
-    private
-
-    def filters
-      @filters ||= self.class.filter_classes.map(&:new)
     end
   end
 end

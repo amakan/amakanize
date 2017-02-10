@@ -34,6 +34,7 @@ module Amakanize
   /x
 end
 
+require "amakanize/filterable"
 require "amakanize/author_name"
 require "amakanize/author_names"
 require "amakanize/filters/base_filter"
