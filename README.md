@@ -46,4 +46,8 @@ Amakanize::AuthorNames.new("ぽんかん⑧、渡 航").map(&:to_s) #=> ["ぽん
 Amakanize::SeriesName.new("やはり俺の青春ラブコメはまちがっている。4").to_s #=> "やはり俺の青春ラブコメはまちがっている。"
 Amakanize::SeriesName.new("ラブライブ! School idol diary ~星空凛~").to_s #=> "ラブライブ! School idol diary"
 Amakanize::SeriesName.new("僕だけがいない街 (1) (カドカワコミックス・エース)").to_s #=> "僕だけがいない街"
+
+Amakanize::VideoPosition.new("第1話 ソードアート・オンラインII").to_s #=> "1"
+Amakanize::VideoPosition.new("デジモンアドベンチャー tri. 第2章「決意」").to_s #=> "2"
+Amakanize::VideoPosition.new("楽園追放-Expelled from Paradise-").to_s #=> ""
 ```
