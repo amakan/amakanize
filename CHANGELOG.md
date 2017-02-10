@@ -1,5 +1,6 @@
 ## Unreleased
 
+- Add `Amakanize::VideoPosition`
 - Rename author name from "r7kamura" to "Ryo Nakamura"
 - Set required Ruby version to 2.2.2 or higher for ActiveSupport
 
