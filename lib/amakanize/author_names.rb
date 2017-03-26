@@ -27,6 +27,8 @@ module Amakanize
     def author_names
       segments.map do |segment|
         ::Amakanize::AuthorName.new(segment)
+      end.reject do |author_name|
+        author_name.to_s.empty?
       end
     end
 

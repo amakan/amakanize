@@ -1,3 +1,7 @@
+## Unreleased
+
+- Reject empty author names on `Amakanize::AuthorNames`
+
 ## 0.6.0
 
 - Add `Amakanize::VideoPosition`
