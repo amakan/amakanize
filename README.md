@@ -4,7 +4,7 @@
 [![Gem Version](https://badge.fury.io/rb/amakanize.svg)](https://rubygems.org/gems/amakanize)
 [![Documentation](http://img.shields.io/badge/docs-rdoc.info-blue.svg)](http://www.rubydoc.info/github/amakan/amakanize)
 
-Utilities to canonicalize names for [amakan.net](https://amakan.net/):
+Utilities to canonicalize names for [amakan.net](https://amakan.net/).
 
 ## Requirements
 
