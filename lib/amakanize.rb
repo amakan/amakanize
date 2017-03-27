@@ -22,6 +22,21 @@ module Amakanize
     |後
   /x
 
+  PATTERN_OF_PREFIX_OF_BOOK_POSITION = /
+    \#\s*
+    |episode\.?\s*
+    |lv\.?\s*
+    |level\.?\s*
+    |vol(?:ume)?\.?\s*
+    |第\s*
+  /ix
+
+  PATTERN_OF_SUFFIX_OF_BOOK_POSITION = /
+    \s*話
+    |\s*巻
+    |\s*版
+  /x
+
   PATTERN_OF_VOLUME_PREFIX = /
     episode\.?\s*
     |\#
@@ -36,8 +51,14 @@ end
 
 require "amakanize/author_name"
 require "amakanize/author_names"
+require "amakanize/book_position"
 require "amakanize/filterable"
 require "amakanize/filters/base_filter"
+require "amakanize/filters/book_position_at_end_detection_filter"
+require "amakanize/filters/book_position_clearing_filter"
+require "amakanize/filters/book_position_in_bracket_detection_filter"
+require "amakanize/filters/book_position_in_words_detection_filter"
+require "amakanize/filters/book_position_number_canonicalization_filter"
 require "amakanize/filters/brackets_normalization_filter"
 require "amakanize/filters/continuous_spaces_normalization_filter"
 require "amakanize/filters/dash_between_alphabets_normalization_filter"
