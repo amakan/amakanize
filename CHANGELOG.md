@@ -1,4 +1,4 @@
-## Unreleased
+## v0.6.1
 
 - Add `Amakanize::BookPosition`
 - Reject empty author names on `Amakanize::AuthorNames`
