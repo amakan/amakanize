@@ -4,7 +4,7 @@
 [![Gem Version](https://badge.fury.io/rb/amakanize.svg)](https://rubygems.org/gems/amakanize)
 [![Documentation](http://img.shields.io/badge/docs-rdoc.info-blue.svg)](http://www.rubydoc.info/github/amakan/amakanize)
 
-Utilities to canonicalize series names and author names for [amakan.net](https://amakan.net/).
+Utilities to canonicalize names for [amakan.net](https://amakan.net/):
 
 ## Requirements
 
@@ -20,33 +20,45 @@ gem "amakanize"
 
 And then execute:
 
-```sh
+```bash
 bundle
 ```
 
 Or manually install:
 
-```sh
+```bash
 gem install amakanize
 ```
 
 ## Usage
 
-```rb
-require "amakanize"
+### Amakanize::AuthorName
 
+```ruby
 Amakanize::AuthorName.new("ぽんかん(8)").to_s #=> "ぽんかん8"
 Amakanize::AuthorName.new("ぽんかん８").to_s #=> "ぽんかん8"
 Amakanize::AuthorName.new("ぽんかん⑧").to_s #=> "ぽんかん8"
+```
 
+### Amakanize::AuthorName
+
+```ruby
 Amakanize::AuthorNames.new("ぽんかん⑧,渡 航").map(&:to_s) #=> ["ぽんかん8", "渡航"]
 Amakanize::AuthorNames.new("ぽんかん⑧，渡 航").map(&:to_s) #=> ["ぽんかん8", "渡航"]
 Amakanize::AuthorNames.new("ぽんかん⑧、渡 航").map(&:to_s) #=> ["ぽんかん8", "渡航"]
+```
 
+### Amakanize::SeriesName
+
+```ruby
 Amakanize::SeriesName.new("やはり俺の青春ラブコメはまちがっている。4").to_s #=> "やはり俺の青春ラブコメはまちがっている。"
 Amakanize::SeriesName.new("ラブライブ! School idol diary ~星空凛~").to_s #=> "ラブライブ! School idol diary"
 Amakanize::SeriesName.new("僕だけがいない街 (1) (カドカワコミックス・エース)").to_s #=> "僕だけがいない街"
+```
 
+### Amakanize::VideoPosition
+
+```ruby
 Amakanize::VideoPosition.new("第1話 ソードアート・オンラインII").to_s #=> "1"
 Amakanize::VideoPosition.new("デジモンアドベンチャー tri. 第2章「決意」").to_s #=> "2"
 Amakanize::VideoPosition.new("楽園追放-Expelled from Paradise-").to_s #=> ""
