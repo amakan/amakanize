@@ -50,6 +50,15 @@ Amakanize::AuthorNames.new("ぽんかん⑧，渡 航").map(&:to_s) #=> ["ぽん
 Amakanize::AuthorNames.new("ぽんかん⑧、渡 航").map(&:to_s) #=> ["ぽんかん8", "渡航"]
 ```
 
+### Amakanize::BookPosition
+
+```ruby
+Amakanize::BookPosition.new("Fate/Grand Order 電撃コミックアンソロジー (2) (電撃コミックスNEXT)").to_s #=> "2"
+Amakanize::BookPosition.new("お迎えです。 6 (花とゆめCOMICS)").to_s #=>  "6"
+Amakanize::BookPosition.new("こいつら100%伝説 上 (集英社文庫 お 34-5)").to_s #=> "上"
+Amakanize::BookPosition.new("THE BEST STAGE ガールフレンド(♪) ~Side MOMOKO~ (電撃コミックスEX)").to_s #=> ""
+```
+
 ### Amakanize::SeriesName
 
 ```ruby
