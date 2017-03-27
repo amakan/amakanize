@@ -40,7 +40,7 @@ Amakanize::AuthorName.new("ぽんかん８").to_s #=> "ぽんかん8"
 Amakanize::AuthorName.new("ぽんかん⑧").to_s #=> "ぽんかん8"
 ```
 
-### Amakanize::AuthorName
+### Amakanize::AuthorNames
 
 ```ruby
 Amakanize::AuthorNames.new("ぽんかん⑧,渡 航").map(&:to_s) #=> ["ぽんかん8", "渡航"]
