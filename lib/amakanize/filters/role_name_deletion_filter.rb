@@ -1,6 +1,8 @@
+require "amakanize/filters/base_filter"
+
 module Amakanize
   module Filters
-    class RoleNameDeletionFilter < BaseFilter
+    class RoleNameDeletionFilter < ::Amakanize::Filters::BaseFilter
       PATTERN_OF_ROLE_NAME = ::Regexp.union(
         %w(
           イラスト

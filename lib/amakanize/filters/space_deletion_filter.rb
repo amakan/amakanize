@@ -1,6 +1,8 @@
+require "amakanize/filters/base_filter"
+
 module Amakanize
   module Filters
-    class SpaceDeletionFilter < BaseFilter
+    class SpaceDeletionFilter < ::Amakanize::Filters::BaseFilter
       # @note Override
       # @param output [String] e.g. `"渡 航"`
       # @return [Hash] e.g. `"渡航"`

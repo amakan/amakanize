@@ -1,8 +1,9 @@
 require "active_support"
+require "amakanize/filters/base_filter"
 
 module Amakanize
   module Filters
-    class NormalizationFilter < BaseFilter
+    class NormalizationFilter < ::Amakanize::Filters::BaseFilter
       # @note Override
       # @param output [String] e.g. `"ぽんかん（８）"`, `"ぽんかん⑧"`
       # @return [Hash] e.g. `"ぽんかん(8)"`, `"ぽんかん8"`

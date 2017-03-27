@@ -1,6 +1,8 @@
+require "amakanize/filters/base_filter"
+
 module Amakanize
   module Filters
-    class ObviousVolumeNumberDeletionFilter < BaseFilter
+    class ObviousVolumeNumberDeletionFilter < ::Amakanize::Filters::BaseFilter
       PATTERN = Regexp.union(
         /\s*#{::Amakanize::PATTERN_OF_VOLUME_PREFIX}?#{::Amakanize::PATTERN_OF_NUMERIC_CHARACTERS}(?:話|巻|版).*/,
         /\s+#{::Amakanize::PATTERN_OF_VOLUME_PREFIX}?#{::Amakanize::PATTERN_OF_NUMERIC_CHARACTERS}(?:話|巻|版)?:\s+.*/,

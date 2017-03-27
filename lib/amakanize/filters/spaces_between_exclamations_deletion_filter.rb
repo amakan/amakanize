@@ -1,6 +1,8 @@
+require "amakanize/filters/base_filter"
+
 module Amakanize
   module Filters
-    class SpacesBetweenExclamationsDeletionFilter < BaseFilter
+    class SpacesBetweenExclamationsDeletionFilter < ::Amakanize::Filters::BaseFilter
       # @note Override
       # @param output [String] e.g. `"ばくおん! !"`
       # @return [Hash] e.g. `"ばくおん!!"`

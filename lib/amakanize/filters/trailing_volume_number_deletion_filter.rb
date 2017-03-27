@@ -1,6 +1,8 @@
+require "amakanize/filters/base_filter"
+
 module Amakanize
   module Filters
-    class TrailingVolumeNumberDeletionFilter < BaseFilter
+    class TrailingVolumeNumberDeletionFilter < ::Amakanize::Filters::BaseFilter
       # @note Override
       # @param output [String] e.g. `"やはり俺の青春ラブコメはまちがっている。4"`, `"ネトゲの嫁は女の子じゃないと思った? Lv.2"`
       # @return [Hash] e.g. `"やはり俺の青春ラブコメはまちがっている。"`, `"ネトゲの嫁は女の子じゃないと思った?"`

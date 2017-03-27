@@ -1,6 +1,8 @@
+require "amakanize/filters/base_filter"
+
 module Amakanize
   module Filters
-    class StripFilter < BaseFilter
+    class StripFilter < ::Amakanize::Filters::BaseFilter
       # @note Override
       # @param output [String] e.g. `" 　ハノカゲ 　"`
       # @return [Hash] e.g. `"ハノカゲ"`

@@ -1,6 +1,8 @@
+require "amakanize/filters/base_filter"
+
 module Amakanize
   module Filters
-    class TrailingAuthorNamePayloadDeletionFilter < BaseFilter
+    class TrailingAuthorNamePayloadDeletionFilter < ::Amakanize::Filters::BaseFilter
       PAYLOADS = %w(
         その他
         ほか

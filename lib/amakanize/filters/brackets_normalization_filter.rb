@@ -1,6 +1,8 @@
+require "amakanize/filters/base_filter"
+
 module Amakanize
   module Filters
-    class BracketsNormalizationFilter < BaseFilter
+    class BracketsNormalizationFilter < ::Amakanize::Filters::BaseFilter
       PAIRS = %w|
         ‾ ‾
         - -

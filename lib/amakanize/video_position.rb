@@ -1,3 +1,5 @@
+require "amakanize/filterable"
+
 module Amakanize
   class VideoPosition
     include ::Amakanize::Filterable

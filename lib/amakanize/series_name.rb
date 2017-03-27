@@ -1,3 +1,5 @@
+require "amakanize/filterable"
+
 module Amakanize
   class SeriesName
     include ::Amakanize::Filterable

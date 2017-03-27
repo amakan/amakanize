@@ -1,6 +1,8 @@
+require "amakanize/filters/base_filter"
+
 module Amakanize
   module Filters
-    class DashBetweenAlhabetsNormalizationFilter < BaseFilter
+    class DashBetweenAlhabetsNormalizationFilter < ::Amakanize::Filters::BaseFilter
       # @note Override
       # @param output [String] e.g. `"D.Grayーman"`
       # @return [Hash] e.g. `"D.Gray-man"`

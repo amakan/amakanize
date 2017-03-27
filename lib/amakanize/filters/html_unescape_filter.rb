@@ -1,8 +1,9 @@
+require "amakanize/filters/base_filter"
 require "cgi"
 
 module Amakanize
   module Filters
-    class HtmlUnescapeFilter < BaseFilter
+    class HtmlUnescapeFilter < ::Amakanize::Filters::BaseFilter
       # @note Override
       # @param output [String] e.g. `"&lt;ハノカゲ&gt;"`
       # @return [Hash] e.g. `"ハノカゲ"`

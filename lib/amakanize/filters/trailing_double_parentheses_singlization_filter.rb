@@ -1,6 +1,8 @@
+require "amakanize/filters/base_filter"
+
 module Amakanize
   module Filters
-    class TrailingDoubleParenthesesSinglizationFilter < BaseFilter
+    class TrailingDoubleParenthesesSinglizationFilter < ::Amakanize::Filters::BaseFilter
       # @note Override
       # @param output [String] e.g. `"ヒナまつり 11 (ヒナまつり)  (ビームコミックス(ハルタ) )"`
       # @return [Hash] e.g. `"ヒナまつり 11 (ヒナまつり)  (ビームコミックスハルタ )"`

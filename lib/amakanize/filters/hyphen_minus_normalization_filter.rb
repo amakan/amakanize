@@ -1,6 +1,8 @@
+require "amakanize/filters/base_filter"
+
 module Amakanize
   module Filters
-    class HyphenMinusNormalizationFilter < BaseFilter
+    class HyphenMinusNormalizationFilter < ::Amakanize::Filters::BaseFilter
       # @note Override
       # @note Replace U+2010 (hyphen) with U+002D (hyphen/minus)
       # @param output [String] e.g. `"D.Gray‐man"`

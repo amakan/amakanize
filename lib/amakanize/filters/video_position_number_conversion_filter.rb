@@ -1,6 +1,8 @@
+require "amakanize/filters/base_filter"
+
 module Amakanize
   module Filters
-    class VideoPositionNumberConversionFilter < BaseFilter
+    class VideoPositionNumberConversionFilter < ::Amakanize::Filters::BaseFilter
       TABLE = {
         /i/i => 1,
         /ii/i => 2,

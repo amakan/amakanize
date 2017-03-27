@@ -34,9 +34,9 @@ module Amakanize
   /x
 end
 
-require "amakanize/filterable"
 require "amakanize/author_name"
 require "amakanize/author_names"
+require "amakanize/filterable"
 require "amakanize/filters/base_filter"
 require "amakanize/filters/brackets_normalization_filter"
 require "amakanize/filters/continuous_spaces_normalization_filter"

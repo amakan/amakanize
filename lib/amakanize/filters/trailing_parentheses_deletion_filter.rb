@@ -1,6 +1,8 @@
+require "amakanize/filters/base_filter"
+
 module Amakanize
   module Filters
-    class TrailingParenthesesDeletionFilter < BaseFilter
+    class TrailingParenthesesDeletionFilter < ::Amakanize::Filters::BaseFilter
       # @note Override
       # @param output [String] e.g. `"魔法使いの嫁 通常版 4 (BLADE COMICS)"`
       # @return [Hash] e.g. `"魔法使いの嫁 通常版 4"`

@@ -1,6 +1,8 @@
+require "amakanize/filters/base_filter"
+
 module Amakanize
   module Filters
-    class TrailingDashDeletionFilter < BaseFilter
+    class TrailingDashDeletionFilter < ::Amakanize::Filters::BaseFilter
       TOKENS = %w(
         ̃
         ̰
