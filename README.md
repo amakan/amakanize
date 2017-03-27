@@ -32,6 +32,12 @@ gem install amakanize
 
 ## Usage
 
+Require `"amakanize"` before using classes below.
+
+```ruby
+require "amakanize"
+```
+
 ### Amakanize::AuthorName
 
 ```ruby
