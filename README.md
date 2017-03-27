@@ -6,10 +6,6 @@
 
 Utilities to canonicalize names for [amakan.net](https://amakan.net/).
 
-## Requirements
-
-- Ruby 2.2.2 or higher
-
 ## Installation
 
 Add this line to your application's Gemfile:
