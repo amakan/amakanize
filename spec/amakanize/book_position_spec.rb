@@ -22,6 +22,7 @@ RSpec.describe Amakanize::BookPosition do
       "おにもて(3)<完> (講談社コミックス)" => "3",
       "お迎えです。 6 (花とゆめCOMICS)" => "6",
       "ガールフレンド(♪) ~nonet notes~ (1) (電撃コミックスEX)" => "1",
+      "キングダム ハーツII(9) (ガンガンコミックス)" => "9",
       "こいつら100%伝説 下 (集英社文庫 お 34-6)" => "下",
       "こいつら100%伝説 上 (集英社文庫 お 34-5)" => "上",
       "スーパーロボット大戦OG -ジ・インスペクター- Record of ATX Vol.1 BAD BEAT BUNKER (電撃コミックスNEXT)" => "1",
@@ -30,9 +31,8 @@ RSpec.describe Amakanize::BookPosition do
       "リュウマのガゴウ  9巻 (ヤングキングコミックス)" => "9",
       "一騎当千  龍虎ノ巻 (ヤングキングコミックス)" => "",
       "怪滅王と12人の星の巫女 (3) (電撃コミックスNEXT)" => "3",
-      "不機嫌なモノノケ庵 6.5 奉公人指南書(アルバイトマニュアル) (ガンガンコミックスONLINE)" => "",
-      "キングダム ハーツII(9) (ガンガンコミックス)" => "9",
       "車田水滸伝 HERO OF HEROES 01 (チャンピオンREDコミックス)" => "1",
+      "不機嫌なモノノケ庵 6.5 奉公人指南書(アルバイトマニュアル) (ガンガンコミックスONLINE)" => "",
     }.each do |book_name, expected_book_position|
       context "with #{book_name.inspect}" do
         let(:raw) do
