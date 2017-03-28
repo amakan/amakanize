@@ -1,3 +1,7 @@
+## Unreleased
+
+- Remove trailing symbols from series name
+
 ## v0.6.1
 
 - Add `Amakanize::BookPosition`

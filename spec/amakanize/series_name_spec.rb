@@ -9,6 +9,8 @@ RSpec.describe Amakanize::SeriesName do
     end
 
     {
+      "RYU-TMRのレゲー解体劇場 - 昭和アーケードゲーム編 - (ガムコミックス)" => "RYU-TMRのレゲー解体劇場 - 昭和アーケードゲーム編",
+      "小林さんちのメイドラゴン 公式アンソロジー ： 2 (アクションコミックス)" => "小林さんちのメイドラゴン 公式アンソロジー",
       "ＢＬＯＯＤ‐Ｃ　（１） (角川コミックス・エース 162-9)" => "BLOOD-C",
       "Buso Renkin, Vol. 5" => "Buso Renkin",
       "D.Gray-man 25 (ジャンプコミックス)" => "D.Gray-man",
