@@ -28,6 +28,7 @@ module Amakanize
     |lv\.?\s*
     |level\.?\s*
     |vol(?:ume)?\.?\s*
+    |その\s*
     |巻(?:の|ノ|之)?\s*
     |第\s*
   /ix
@@ -46,7 +47,8 @@ module Amakanize
     |vol(?:ume)?\.?\s*
     |Vol(?:ume)?\.?\s*
     |VOL(?:UME)?\.?\s*
-    |第
+    |その\s*
+    |第\s*
   /x
 end
 

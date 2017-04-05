@@ -9,6 +9,7 @@ RSpec.describe Amakanize::BookPosition do
     end
 
     {
+      "イリヤの空、UFOの夏〈その1〉 (電撃文庫)" => "1",
       "12BEAST (4) (ドラゴンコミックスエイジ お 6-1-4)" => "4",
       "20世紀少年 完全版 6 (ビッグコミックススペシャル)" => "6",
       "Fate/Grand Order 電撃コミックアンソロジー (2) (電撃コミックスNEXT)" => "2",

@@ -1,3 +1,7 @@
+## Unreleased
+
+- Support `(その1)` format
+
 ## v0.6.2
 
 - Remove trailing symbols from series name
