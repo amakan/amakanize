@@ -1,4 +1,4 @@
-## Unreleased
+## v0.6.3
 
 - Support `(その1)` format
 
