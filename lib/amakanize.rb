@@ -19,7 +19,7 @@ module Amakanize
     |下
     |中
     |前
-    |後
+    |(?<!放課)後
   /x
 
   PATTERN_OF_PREFIX_OF_BOOK_POSITION = /
