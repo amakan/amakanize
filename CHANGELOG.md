@@ -1,3 +1,7 @@
+## v0.6.4
+
+- Fix bug on 放課"後"
+
 ## v0.6.3
 
 - Support `(その1)` format
