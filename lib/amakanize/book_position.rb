@@ -12,7 +12,7 @@ module Amakanize
           ::Amakanize::Filters::NormalizationFilter,
           ::Amakanize::Filters::ContinuousSpacesNormalizationFilter,
           ::Amakanize::Filters::HyphenMinusNormalizationFilter,
-          ::Amakanize::Filters::DashBetweenAlhabetsNormalizationFilter,
+          ::Amakanize::Filters::DashBetweenAlphabetsNormalizationFilter,
           ::Amakanize::Filters::BracketsNormalizationFilter,
           ::Amakanize::Filters::SpacesBetweenExclamationsDeletionFilter,
           ::Amakanize::Filters::SpaceBetweenExclamationAndBracketDeletionFilter,
