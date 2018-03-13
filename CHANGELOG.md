@@ -1,3 +1,7 @@
+## v0.6.5
+
+- Fix typo in DashBetweenAl'p'habetsNormalizationFilter
+
 ## v0.6.4
 
 - Fix bug on 放課"後"
