@@ -1,3 +1,7 @@
+## v0.7.0
+
+- Require Ruby 2.5+
+
 ## v0.6.5
 
 - Fix typo in DashBetweenAl'p'habetsNormalizationFilter
