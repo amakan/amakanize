@@ -1,4 +1,3 @@
-require "active_support"
 require "amakanize/filters/base_filter"
 
 module Amakanize
@@ -10,7 +9,7 @@ module Amakanize
       def call(context:, output:)
         {
           context: context,
-          output: ::ActiveSupport::Multibyte::Unicode.normalize(output),
+          output: output.unicode_normalize(:nfkc),
         }
       end
     end

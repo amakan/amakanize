@@ -1,8 +1,8 @@
-require "active_support/concern"
-
 module Amakanize
   module Filterable
-    extend ::ActiveSupport::Concern
+    def self.included(base)
+      base.extend(ClassMethods)
+    end
 
     # @param raw [String]
     def initialize(raw)
