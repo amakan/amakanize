@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require "amakanize/filters/base_filter"
+require 'amakanize/filters/base_filter'
 
 module Amakanize
   module Filters
@@ -23,10 +23,10 @@ module Amakanize
         {
           context: context,
           output: output
-            .gsub(%r{\A#{PATTERN_OF_ROLE_NAME}[:/]}, "")
-            .gsub(%r{[:/]#{PATTERN_OF_ROLE_NAME}\z}, "")
-            .gsub(/\A\(#{PATTERN_OF_ROLE_NAME}(?:・#{PATTERN_OF_ROLE_NAME})*\)/, "")
-            .gsub(/\(#{PATTERN_OF_ROLE_NAME}(?:・#{PATTERN_OF_ROLE_NAME})*\)\z/, "")
+            .gsub(%r{\A#{PATTERN_OF_ROLE_NAME}[:/]}, '')
+            .gsub(%r{[:/]#{PATTERN_OF_ROLE_NAME}\z}, '')
+            .gsub(/\A\(#{PATTERN_OF_ROLE_NAME}(?:・#{PATTERN_OF_ROLE_NAME})*\)/, '')
+            .gsub(/\(#{PATTERN_OF_ROLE_NAME}(?:・#{PATTERN_OF_ROLE_NAME})*\)\z/, '')
         }
       end
     end

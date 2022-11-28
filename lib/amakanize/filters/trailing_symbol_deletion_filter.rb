@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require "amakanize/filters/base_filter"
+require 'amakanize/filters/base_filter'
 
 module Amakanize
   module Filters
@@ -9,7 +9,7 @@ module Amakanize
 
       # @note Override
       def call(context:, output:)
-        output = output.gsub(PATTERN, "")
+        output = output.gsub(PATTERN, '')
         {
           context: context,
           output: output

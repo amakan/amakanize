@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require "amakanize/filterable"
+require 'amakanize/filterable'
 
 module Amakanize
   class BookPosition
