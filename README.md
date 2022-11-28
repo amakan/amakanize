@@ -2,7 +2,7 @@
 
 [![test](https://github.com/amakan/amakanize/actions/workflows/test.yml/badge.svg)](https://github.com/amakan/amakanize/actions/workflows/test.yml)
 
-Utilities to canonicalize names for [amakan.net](https://amakan.net/).
+Utilities to canonicalize Japanese comic series names and author names.
 
 ## Installation
 

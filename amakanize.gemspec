@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.version = Amakanize::VERSION
   spec.authors = ["Ryo Nakamura"]
   spec.email = ["r7kamura@gmail.com"]
-  spec.summary = "Utilities to canonicalize series names and author names."
+  spec.summary = "Utilities to canonicalize Japanese comic series names and author names."
   spec.homepage = "https://github.com/amakan/amakanize"
   spec.license = "MIT"
 
