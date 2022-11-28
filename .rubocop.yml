@@ -1,84 +1,17 @@
 AllCops:
-  Exclude:
-    - db/**/*
-    - node_modules/**/*
-    - vendor/**/*
   TargetRubyVersion: 2.7
 
-AsciiComments:
+Layout/LineLength:
   Enabled: false
 
-Lint/HandleExceptions:
-  Enabled: false
-
-Lint/UnusedBlockArgument:
-  Enabled: false
-
-Lint/UnusedMethodArgument:
-  Enabled: false
-
-Metrics/AbcSize:
-  Enabled: false
-
-Metrics/ClassLength:
-  Enabled: false
-
-Metrics/CyclomaticComplexity:
-  Enabled: false
-
-Metrics/LineLength:
-  Enabled: false
-
-Metrics/MethodLength:
-  Enabled: false
-
-Metrics/ParameterLists:
-  Enabled: false
-
-Metrics/PerceivedComplexity:
-  Max: 10
-
-Style/AccessModifierIndentation:
+Metrics:
   Enabled: false
 
 Style/Documentation:
   Enabled: false
 
-Style/DoubleNegation:
-  Enabled: false
-
-Style/GuardClause:
-  Enabled: false
-
-Style/IfUnlessModifier:
-  Enabled: false
-
 Style/MultilineBlockChain:
-  Enabled: false
-
-Style/MultilineMethodCallIndentation:
-  Enabled: false
-
-Style/MutableConstant:
-  Enabled: false
-
-Style/Next:
-  Enabled: false
-
-Style/PercentLiteralDelimiters:
-  Enabled: false
-
-Style/PredicateName:
-  Enabled: false
-
-Style/SpaceAroundOperators:
   Enabled: false
 
 Style/StringLiterals:
   EnforcedStyle: double_quotes
-
-Style/TrailingCommaInArguments:
-  Enabled: false
-
-Style/TrailingCommaInLiteral:
-  Enabled: false

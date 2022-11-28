@@ -1,12 +1,14 @@
+# frozen_string_literal: true
+
 module Amakanize
   class AuthorNames
     include ::Enumerable
 
-    AUTHOR_NAME_SEPARATORS = %w(
+    AUTHOR_NAME_SEPARATORS = %w[
       ,
       ，
       、
-    )
+    ].freeze
 
     AUTHOR_NAME_SEPARATORS_REGEXP = ::Regexp.union(AUTHOR_NAME_SEPARATORS)
 
@@ -34,9 +36,7 @@ module Amakanize
 
     # @private
     # @return [String]
-    def raw
-      @raw
-    end
+    attr_reader :raw
 
     # @private
     # @return [Array<String>]

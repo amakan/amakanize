@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require "amakanize/filters/base_filter"
 
 module Amakanize
@@ -6,7 +8,7 @@ module Amakanize
       PAYLOADS = %w(
         通常版
         (未分類)
-      )
+      ).freeze
 
       # @note Override
       # @param output [String] e.g. `"魔法使いの嫁 通常版"`
@@ -14,7 +16,7 @@ module Amakanize
       def call(context:, output:)
         {
           context: context,
-          output: output.gsub(/\s+#{::Regexp.union(PAYLOADS)}\z/, ""),
+          output: output.gsub(/\s+#{::Regexp.union(PAYLOADS)}\z/, "")
         }
       end
     end

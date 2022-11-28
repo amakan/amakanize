@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require "amakanize/filterable"
 
 module Amakanize
@@ -14,7 +16,7 @@ module Amakanize
           ::Amakanize::Filters::ParenthesesDeletionFilter,
           ::Amakanize::Filters::RoleNameDeletionFilter,
           ::Amakanize::Filters::TrailingAuthorNamePayloadDeletionFilter,
-          ::Amakanize::Filters::SpaceDeletionFilter,
+          ::Amakanize::Filters::SpaceDeletionFilter
         ]
       end
     end

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require "amakanize/filterable"
 
 module Amakanize
@@ -15,7 +17,7 @@ module Amakanize
           ::Amakanize::Filters::DashBetweenAlphabetsNormalizationFilter,
           ::Amakanize::Filters::BracketsNormalizationFilter,
           ::Amakanize::Filters::VideoPositionDetectionFilter,
-          ::Amakanize::Filters::VideoPositionNumberConversionFilter,
+          ::Amakanize::Filters::VideoPositionNumberConversionFilter
         ]
       end
     end

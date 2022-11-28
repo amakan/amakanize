@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require "amakanize/filters/base_filter"
 
 module Amakanize
@@ -7,16 +9,15 @@ module Amakanize
       # @param output [String] e.g. `"第1話「でじこだにょ」/第2話「ぷちこと一緒かにょ？」"`
       # @return [Hash] e.g. `"1"`
       def call(context:, output:)
-        output = begin
-          if output.match(/#{::Amakanize::PATTERN_OF_VOLUME_PREFIX}(#{PATTERN_OF_NUMERIC_CHARACTERS})/)
-            ::Regexp.last_match(1)
-          else
-            ""
-          end
-        end
+        output = if output.match(/#{::Amakanize::PATTERN_OF_VOLUME_PREFIX}(#{PATTERN_OF_NUMERIC_CHARACTERS})/)
+                   ::Regexp.last_match(1)
+                 else
+                   ""
+                 end
+
         {
           context: context,
-          output: output,
+          output: output
         }
       end
     end

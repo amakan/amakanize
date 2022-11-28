@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require "amakanize/filters/base_filter"
 
 module Amakanize
@@ -6,19 +8,17 @@ module Amakanize
       PATTERN = /
         (?:#{::Amakanize::PATTERN_OF_PREFIX_OF_BOOK_POSITION})(#{::Amakanize::PATTERN_OF_NUMERIC_CHARACTERS})
         |(#{::Amakanize::PATTERN_OF_NUMERIC_CHARACTERS})(?:#{::Amakanize::PATTERN_OF_SUFFIX_OF_BOOK_POSITION})
-      /x
+      /x.freeze
 
       # @note Override
       def call(context:, output:)
-        unless context[:position_detected]
-          if position = output[PATTERN, 1]
-            context[:position_detected] = true
-            output = position
-          end
+        if !context[:position_detected] && (position = output[PATTERN, 1])
+          context[:position_detected] = true
+          output = position
         end
         {
           context: context,
-          output: output,
+          output: output
         }
       end
     end

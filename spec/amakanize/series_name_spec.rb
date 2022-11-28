@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 RSpec.describe Amakanize::SeriesName do
   let(:series_name) do
     described_class.new(raw)
@@ -89,7 +91,7 @@ RSpec.describe Amakanize::SeriesName do
       "魔法使いの嫁 通常版 4 (BLADE COMICS)" => "魔法使いの嫁",
       "魔法少女育成計画limited（前）" => "魔法少女育成計画limited",
       "ヒナまつり 11<ヒナまつり> (ビームコミックス（ハルタ）)" => "ヒナまつり",
-      "ミキの放課後 (ミリオンコミックス)" => "ミキの放課後",
+      "ミキの放課後 (ミリオンコミックス)" => "ミキの放課後"
     }.each do |book_name, expected_series_name|
       context "with #{book_name.inspect}" do
         let(:raw) do

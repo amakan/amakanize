@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 RSpec.describe Amakanize::BookPosition do
   let(:book_position) do
     described_class.new(raw)
@@ -36,9 +38,9 @@ RSpec.describe Amakanize::BookPosition do
       "一騎当千  龍虎ノ巻 (ヤングキングコミックス)" => "",
       "怪滅王と12人の星の巫女 (3) (電撃コミックスNEXT)" => "3",
       "車田水滸伝 HERO OF HEROES 01 (チャンピオンREDコミックス)" => "1",
-      "世紀末博狼伝サガ 巻6 賭けゴルフ (ジャンプコミックスデラックス)"  => "6",
+      "世紀末博狼伝サガ 巻6 賭けゴルフ (ジャンプコミックスデラックス)" => "6",
       "不機嫌なモノノケ庵 6.5 奉公人指南書(アルバイトマニュアル) (ガンガンコミックスONLINE)" => "",
-      "明治失業忍法帖 巻ノ2―じゃじゃ馬主君とリストラ忍者 (ボニータコミックスα)" => "2",
+      "明治失業忍法帖 巻ノ2―じゃじゃ馬主君とリストラ忍者 (ボニータコミックスα)" => "2"
     }.each do |book_name, expected_book_position|
       context "with #{book_name.inspect}" do
         let(:raw) do

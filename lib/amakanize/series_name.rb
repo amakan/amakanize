@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require "amakanize/filterable"
 
 module Amakanize
@@ -23,7 +25,7 @@ module Amakanize
           ::Amakanize::Filters::TrailingSeriesNamePayloadDeletionFilter,
           ::Amakanize::Filters::TrailingVolumeNumberDeletionFilter,
           ::Amakanize::Filters::TrailingSeriesNamePayloadDeletionFilter,
-          ::Amakanize::Filters::TrailingSymbolDeletionFilter,
+          ::Amakanize::Filters::TrailingSymbolDeletionFilter
         ]
       end
     end

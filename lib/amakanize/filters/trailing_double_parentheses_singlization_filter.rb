@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require "amakanize/filters/base_filter"
 
 module Amakanize
@@ -9,9 +11,9 @@ module Amakanize
       def call(context:, output:)
         {
           context: context,
-          output: output.sub(/\([^\(^\)]+?\([^\(]+?\)[^\)^\(]+?\)\z/) do
-            "(" + $&.gsub(/[\(\)]/, "") + ")"
-          end,
+          output: output.sub(/\([^(^)]+?\([^(]+?\)[^)^(]+?\)\z/) do
+            "(#{::Regexp.last_match(0).gsub(/[()]/, '')})"
+          end
         }
       end
     end
