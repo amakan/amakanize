@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require "amakanize/filters/base_filter"
+require 'amakanize/filters/base_filter'
 
 module Amakanize
   module Filters
@@ -12,7 +12,7 @@ module Amakanize
         output = if output.match(/#{::Amakanize::PATTERN_OF_VOLUME_PREFIX}(#{PATTERN_OF_NUMERIC_CHARACTERS})/)
                    ::Regexp.last_match(1)
                  else
-                   ""
+                   ''
                  end
 
         {

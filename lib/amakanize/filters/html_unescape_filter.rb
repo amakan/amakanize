@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
-require "amakanize/filters/base_filter"
-require "cgi"
+require 'amakanize/filters/base_filter'
+require 'cgi'
 
 module Amakanize
   module Filters

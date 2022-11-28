@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require "amakanize/filters/base_filter"
+require 'amakanize/filters/base_filter'
 
 module Amakanize
   module Filters
@@ -11,7 +11,7 @@ module Amakanize
       def call(context:, output:)
         {
           context: context,
-          output: output.gsub(/!\s+!/, "!!")
+          output: output.gsub(/!\s+!/, '!!')
         }
       end
     end

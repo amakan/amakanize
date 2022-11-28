@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require "amakanize/filters/base_filter"
+require 'amakanize/filters/base_filter'
 
 module Amakanize
   module Filters
@@ -23,7 +23,7 @@ module Amakanize
         unless context[:volume_number_removed]
           output = output.sub(PATTERN) do
             context[:volume_number_removed] = true
-            ""
+            ''
           end
         end
         {
