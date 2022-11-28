@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require "amakanize/filters/base_filter"
 
 module Amakanize
@@ -9,9 +11,9 @@ module Amakanize
         /\s+#{::Amakanize::PATTERN_OF_VOLUME_PREFIX}#{::Amakanize::PATTERN_OF_NUMERIC_CHARACTERS}\s+.*/,
         /\s+Lv\.?\s*#{::Amakanize::PATTERN_OF_NUMERIC_CHARACTERS}(?:\s+.*|\z)/,
         /\s*\(#{::Amakanize::PATTERN_OF_VOLUME_PREFIX}?#{::Amakanize::PATTERN_OF_NUMERIC_CHARACTERS}\).*/,
-        %r<\s*\d+年\s*\d+\s*(?:月|/\d+\s*)号.*>,
+        %r{\s*\d+年\s*\d+\s*(?:月|/\d+\s*)号.*},
         /\s*\d{4}\s*(?:AUTUMN|SPRING|SUMMER|WINTER)/,
-        /\s*\d+年\s*\d+\s*号.*/,
+        /\s*\d+年\s*\d+\s*号.*/
       )
 
       # @note Override
@@ -26,7 +28,7 @@ module Amakanize
         end
         {
           context: context,
-          output: output,
+          output: output
         }
       end
     end

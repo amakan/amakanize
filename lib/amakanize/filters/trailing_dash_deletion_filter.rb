@@ -1,9 +1,11 @@
+# frozen_string_literal: true
+
 require "amakanize/filters/base_filter"
 
 module Amakanize
   module Filters
     class TrailingDashDeletionFilter < ::Amakanize::Filters::BaseFilter
-      TOKENS = %w(
+      TOKENS = %w[
         ̃
         ̰
         ̴
@@ -20,7 +22,7 @@ module Amakanize
         ～
         ∼
         ─
-      )
+      ].freeze
 
       # @note Override
       # @param output [String] e.g. `"アド・アストラ 1 ─スキピオとハンニバル─"`
@@ -28,7 +30,7 @@ module Amakanize
       def call(context:, output:)
         {
           context: context,
-          output: output.gsub(/\s*#{::Regexp.union(TOKENS)}.*/, ""),
+          output: output.gsub(/\s*#{::Regexp.union(TOKENS)}.*/, "")
         }
       end
     end

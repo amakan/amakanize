@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require "amakanize/filters/base_filter"
 
 module Amakanize
@@ -9,7 +11,7 @@ module Amakanize
       def call(context:, output:)
         {
           context: context,
-          output: output.gsub(/(\w)ー(\w)/, '\1-\2'),
+          output: output.gsub(/(\w)ー(\w)/, '\1-\2')
         }
       end
     end

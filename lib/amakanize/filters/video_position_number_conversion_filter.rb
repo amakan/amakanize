@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require "amakanize/filters/base_filter"
 
 module Amakanize
@@ -142,17 +144,17 @@ module Amakanize
         "⑦" => 7,
         "⑧" => 8,
         "⑨" => 9,
-        "⑩" => 10,
-      }
+        "⑩" => 10
+      }.freeze
 
       # @note Override
       def call(context:, output:)
         output = TABLE.to_a.reverse.each_with_object(output.clone) do |(key, value), result|
-          result.gsub!(key, value.to_s)
+          result.gsub(key, value.to_s)
         end
         {
           context: context,
-          output: output,
+          output: output
         }
       end
     end

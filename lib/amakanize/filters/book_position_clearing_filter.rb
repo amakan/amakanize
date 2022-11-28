@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require "amakanize/filters/base_filter"
 
 module Amakanize
@@ -5,12 +7,10 @@ module Amakanize
     class BookPositionClearingFilter < ::Amakanize::Filters::BaseFilter
       # @note Override
       def call(context:, output:)
-        unless context[:position_detected]
-          output = ""
-        end
+        output = "" unless context[:position_detected]
         {
           context: context,
-          output: output,
+          output: output
         }
       end
     end

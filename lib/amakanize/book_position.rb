@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require "amakanize/filterable"
 
 module Amakanize
@@ -25,7 +27,7 @@ module Amakanize
           ::Amakanize::Filters::BookPositionAtEndDetectionFilter,
           ::Amakanize::Filters::BookPositionClearingFilter,
           ::Amakanize::Filters::VideoPositionNumberConversionFilter,
-          ::Amakanize::Filters::BookPositionNumberCanonicalizationFilter,
+          ::Amakanize::Filters::BookPositionNumberCanonicalizationFilter
         ]
       end
     end

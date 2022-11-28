@@ -1,17 +1,19 @@
+# frozen_string_literal: true
+
 require "amakanize/filters/base_filter"
 
 module Amakanize
   module Filters
     class RoleNameDeletionFilter < ::Amakanize::Filters::BaseFilter
       PATTERN_OF_ROLE_NAME = ::Regexp.union(
-        %w(
+        %w[
           イラスト
           カバーデザイン
           キャラクター原案
           原作
           原案
           漫画
-        )
+        ]
       )
 
       # @note Override
@@ -21,10 +23,10 @@ module Amakanize
         {
           context: context,
           output: output
-            .gsub(%r<\A#{PATTERN_OF_ROLE_NAME}[:/]>, "")
-            .gsub(%r<[:/]#{PATTERN_OF_ROLE_NAME}\z>, "")
+            .gsub(%r{\A#{PATTERN_OF_ROLE_NAME}[:/]}, "")
+            .gsub(%r{[:/]#{PATTERN_OF_ROLE_NAME}\z}, "")
             .gsub(/\A\(#{PATTERN_OF_ROLE_NAME}(?:・#{PATTERN_OF_ROLE_NAME})*\)/, "")
-            .gsub(/\(#{PATTERN_OF_ROLE_NAME}(?:・#{PATTERN_OF_ROLE_NAME})*\)\z/, ""),
+            .gsub(/\(#{PATTERN_OF_ROLE_NAME}(?:・#{PATTERN_OF_ROLE_NAME})*\)\z/, "")
         }
       end
     end

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require "amakanize/filters/base_filter"
 
 module Amakanize
@@ -5,12 +7,10 @@ module Amakanize
     class BookPositionNumberCanonicalizationFilter < ::Amakanize::Filters::BaseFilter
       # @note Override
       def call(context:, output:)
-        if context[:position_detected]
-          output = output.gsub(/\A0+([1-9]+)/, '\1')
-        end
+        output = output.gsub(/\A0+([1-9]+)/, '\1') if context[:position_detected]
         {
           context: context,
-          output: output,
+          output: output
         }
       end
     end

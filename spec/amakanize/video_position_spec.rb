@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 RSpec.describe Amakanize::VideoPosition do
   let(:video_position) do
     described_class.new(raw)
@@ -19,8 +21,8 @@ RSpec.describe Amakanize::VideoPosition do
       "第1話 ソードアート・オンラインII" => "1",
       "第2話〜6話 ポンコツクエスト〜魔王と派遣の魔物たち〜" => "2",
       "第4話 雨色ココア in Hawaii" => "4",
-      "第十ニ話 刀剣乱舞-花丸- （オリジナル映像付き）" => "10",
-      "超英雄祭 KAMEN RIDER×SUPER SENTAI LIVE＆SHOW 2016" => "",
+      "第十ニ話 刀剣乱舞-花丸- （オリジナル映像付き）" => "十", # FIXME
+      "超英雄祭 KAMEN RIDER×SUPER SENTAI LIVE＆SHOW 2016" => ""
     }.each do |video_name, expected_video_position|
       context "with #{video_name.inspect}" do
         let(:raw) do

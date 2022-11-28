@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require "amakanize/filters/base_filter"
 
 module Amakanize
@@ -33,7 +35,7 @@ module Amakanize
         {
           context: context,
           output: PAIRS.each_with_object(output) do |(open, close), result|
-            result.gsub!(/#{open}([^\( ]+?)#{close}/, '(\1)')
+            result.gsub!(/#{open}([^( ]+?)#{close}/, '(\1)')
           end.gsub(/\s*\((.+?)\)(?:\z|(\s*))/) do
             " \(#{::Regexp.last_match(1)})#{' ' if Regexp.last_match(2)}"
           end

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Amakanize
   module Filterable
     def self.included(base)

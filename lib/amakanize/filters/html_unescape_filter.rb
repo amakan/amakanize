@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require "amakanize/filters/base_filter"
 require "cgi"
 
@@ -10,7 +12,7 @@ module Amakanize
       def call(context:, output:)
         {
           context: context,
-          output: ::CGI.unescapeHTML(output),
+          output: ::CGI.unescapeHTML(output)
         }
       end
     end

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Amakanize
   PATTERN_OF_NUMERIC_CHARACTERS = /
     \d+(?:\.\d+)?
@@ -20,7 +22,7 @@ module Amakanize
     |中
     |前
     |(?<!放課)後
-  /x
+  /x.freeze
 
   PATTERN_OF_PREFIX_OF_BOOK_POSITION = /
     \#\s*
@@ -31,13 +33,13 @@ module Amakanize
     |その\s*
     |巻(?:の|ノ|之)?\s*
     |第\s*
-  /ix
+  /ix.freeze
 
   PATTERN_OF_SUFFIX_OF_BOOK_POSITION = /
     \s*話
     |\s*巻
     |\s*版
-  /x
+  /x.freeze
 
   PATTERN_OF_VOLUME_PREFIX = /
     episode\.?\s*
@@ -49,7 +51,7 @@ module Amakanize
     |VOL(?:UME)?\.?\s*
     |その\s*
     |第\s*
-  /x
+  /x.freeze
 end
 
 require "amakanize/author_name"

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 RSpec.describe Amakanize::AuthorName do
   let(:author_name) do
     described_class.new(raw)
@@ -28,7 +30,7 @@ RSpec.describe Amakanize::AuthorName do
       "ぽんかん⑧" => "ぽんかん8",
       "渡 航" => "渡航",
       "渡　航" => "渡航",
-      "漫画:ハノカゲ" => "ハノカゲ",
+      "漫画:ハノカゲ" => "ハノカゲ"
     }.each do |key, value|
       context "with #{key.inspect}" do
         let(:raw) do
