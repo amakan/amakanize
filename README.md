@@ -1,8 +1,6 @@
 # Amakanize
 
-[![CircleCI](https://img.shields.io/circleci/project/github/amakan/amakanize.svg)](https://circleci.com/gh/amakan/amakanize)
-[![Gem Version](https://badge.fury.io/rb/amakanize.svg)](https://rubygems.org/gems/amakanize)
-[![Documentation](http://img.shields.io/badge/docs-rdoc.info-blue.svg)](http://www.rubydoc.info/github/amakan/amakanize)
+[![test](https://github.com/amakan/amakanize/actions/workflows/test.yml/badge.svg)](https://github.com/amakan/amakanize/actions/workflows/test.yml)
 
 Utilities to canonicalize names for [amakan.net](https://amakan.net/).
 
