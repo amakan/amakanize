@@ -12,7 +12,7 @@ module Amakanize
     # @note Override
     def to_s
       filters.inject(context: {}, output: raw) do |result, filter|
-        filter.call(result)
+        filter.call(**result)
       end[:output]
     end
 
